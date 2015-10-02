@@ -1,0 +1,140 @@
+@font-face {
+  font-family: default;
+  src: url("../fonts/OpenSans-Regular.ttf"); }
+body {
+  background-color: #efefef;
+  font-family: default; }
+
+.sitename {
+  display: inline-block;
+  color: #00aaff; }
+  .sitename span {
+    color: #ffd21f; }
+
+li {
+  padding: 4px 0; }
+
+.event-header:before {
+  content: "";
+  background: url("../temp/badminton2.jpg") no-repeat top center;
+  background-size: 100%;
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(35px);
+  -moz-filter: blur(35px);
+  -o-filter: blur(35px);
+  -ms-filter: blur(35px);
+  filter: blur(35px); }
+.event-header .content {
+  position: relative; }
+.event-header .event-title {
+  width: 100%; }
+.event-header .event-date {
+  display: inline-block;
+  background: url("../images/date.png") no-repeat;
+  background-size: 100% 100%;
+  width: 100px;
+  height: 120px; }
+  .event-header .event-date .day-month {
+    padding: 35px 0 5px 0;
+    text-align: center;
+    font-size: 22px; }
+  .event-header .event-date .year {
+    font-size: 26px;
+    text-align: center; }
+.event-header .title {
+  display: inline-block;
+  font-size: 36px;
+  vertical-align: top;
+  padding: 40px;
+  text-align: center; }
+  .event-header .title .sub-title {
+    font-size: 18px;
+    padding-top: 10px; }
+  .event-header .title .details {
+    font-size: 16px;
+    padding-top: 15px; }
+
+.event-tile {
+  display: inline-block;
+  margin: 15px;
+  width: 100%; }
+  .event-tile .half {
+    width: 50%; }
+  .event-tile .heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00aaff;
+    width: 100%; }
+
+#event-location-map {
+  width: 100%;
+  height: 300px; }
+
+.categories .type.collapsed .category-label {
+  background-color: #ffd21f; }
+.categories .type.collapsed .category-details {
+  display: none; }
+.categories .type.expanded .category-label {
+  border: 1px solid #ffd21f; }
+.categories .type.expanded .category-details {
+  margin-bottom: 30px;
+  display: block; }
+.categories .category-label {
+  font-size: 20px;
+  padding: 10px;
+  position: relative;
+  margin: 2px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer; }
+.categories .category-details > div {
+  position: relative;
+  display: inline-block;
+  width: 33%;
+  height: 300px;
+  border-radius: 5px;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin: 15px 0;
+  padding: 10px 0;
+  text-align: center; }
+.categories .category-details .numbering {
+  font-size: 12px;
+  background-color: #ffd21f;
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 15px; }
+.categories .category-details .message {
+  position: absolute;
+  box-sizing: border-box;
+  top: 30px;
+  padding: 15px;
+  text-align: center;
+  width: 100%; }
+.categories .category-details .action {
+  position: absolute;
+  bottom: 0px;
+  padding: 5px;
+  text-align: center;
+  width: 100%; }
+.categories .category-details .pay {
+  padding: 10px;
+  background-color: #00aaff;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ffd21f;
+  margin-top: 5px; }
+.categories .category-details .enroll {
+  background: url("../images/enroll.png") no-repeat center center; }
+.categories .category-details .participate {
+  background: url("../images/participate.png") no-repeat center center; }
+.categories .category-details .win {
+  background: url("../images/win.png") no-repeat center center; }

@@ -1,0 +1,27 @@
+$width: 1000px;
+$color-gray: #EFEFEF;
+$color-darkgray: #dedede;
+$color-logo-blue: #00aaff;
+$color-logo-yellow: #ffd21f;
+
+@font-face {
+  font-family: default;
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+body {
+  background-color: $color-gray;
+  font-family: default;
+}
+
+.sitename {
+  display: inline-block;
+  color: $color-logo-blue;
+  span {
+    color: $color-logo-yellow;
+  }
+}
+
+li {
+  padding: 4px 0;
+}

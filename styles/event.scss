@@ -1,0 +1,185 @@
+@import 'common';
+
+.event-header {
+  &:before {
+    content: "";
+    background: url('../temp/badminton2.jpg') no-repeat top center;
+    background-size: 100%;
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(35px);
+    -moz-filter: blur(35px);
+    -o-filter: blur(35px);
+    -ms-filter: blur(35px);
+    filter: blur(35px);
+  }
+
+  .content {
+    position: relative;
+  }
+
+  .event-title {
+    width: 100%;
+  }
+
+  .event-date {
+    display: inline-block;
+    background: url('../images/date.png') no-repeat;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 120px;
+
+    .day-month {
+      padding: 35px 0 5px 0;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    .year {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 36px;
+    vertical-align: top;
+    padding: 40px;
+    text-align: center;
+
+    .sub-title {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    .details {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+  }
+
+}
+
+.event-tile {
+  display: inline-block;
+  margin: 15px;
+  width: 100%;
+
+  .half {
+    width: 50%;
+  }
+
+  .heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $color-logo-blue;
+    width: 100%;
+  }
+
+}
+
+#event-location-map {
+  width: 100%;
+  height: 300px;
+}
+
+.categories {
+
+  .type.collapsed {
+    .category-label {
+      background-color: $color-logo-yellow;
+    }
+    .category-details {
+      display: none;
+    }
+  }
+
+  .type.expanded {
+    .category-label {
+      border: 1px solid $color-logo-yellow;
+    }
+    .category-details {
+      margin-bottom: 30px;
+      display: block;
+    }
+  }
+
+  .category-label {
+    font-size: 20px;
+    padding: 10px;
+    position: relative;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .category-details {
+    > div {
+      position: relative;
+      display: inline-block;
+      width: 33%;
+      height: 300px;
+      //border: 1px solid $color-logo-yellow;
+      border-radius: 5px;
+      vertical-align: top;
+      box-sizing: border-box;
+      margin: 15px 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .numbering {
+      font-size: 12px;
+      background-color: $color-logo-yellow;
+      text-align: center;
+      display: inline-block;
+      margin: auto;
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
+
+    .message {
+      position: absolute;
+      box-sizing: border-box;
+      top: 30px;
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .action {
+      position: absolute;
+      bottom: 0px;
+      padding: 5px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .pay {
+      padding: 10px;
+      background-color: $color-logo-blue;
+      color: #ffffff;
+      border-radius: 5px;
+      border: 1px solid $color-logo-yellow;
+      margin-top: 5px;
+    }
+
+    .enroll {
+      background: url("../images/enroll.png") no-repeat center center;
+    }
+    .participate {
+      background: url("../images/participate.png") no-repeat center center;
+    }
+    .win {
+      background: url("../images/win.png") no-repeat center center;
+    }
+  }
+
+}

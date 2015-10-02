@@ -1,0 +1,160 @@
+@font-face {
+  font-family: default;
+  src: url("../fonts/OpenSans-Regular.ttf"); }
+body {
+  background-color: #efefef;
+  font-family: default; }
+
+.sitename {
+  display: inline-block;
+  color: #00aaff; }
+  .sitename span {
+    color: #ffd21f; }
+
+li {
+  padding: 4px 0; }
+
+.heading1 {
+  font-size: 32px;
+  padding: 15px 0; }
+
+.site-name-container {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .site-name-container > div {
+    width: 1000px;
+    margin: 0 auto; }
+  .site-name-container .sitename {
+    top: 500px;
+    left: 342px;
+    font-size: 72px;
+    border-radius: 15px; }
+  .site-name-container .site-label {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px; }
+  .site-name-container .caption {
+    text-align: center; }
+
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #dedede; }
+  .header .content {
+    width: 1000px;
+    margin: 0 auto; }
+    .header .content .games {
+      display: inline-block;
+      padding-left: 100px; }
+      .header .content .games > div {
+        display: inline-block;
+        padding: 10px; }
+      .header .content .games > div.selected {
+        background-color: #efefef;
+        font-weight: bold; }
+    .header .content .login {
+      float: right;
+      display: inline-block;
+      padding: 10px; }
+
+.backdrop {
+  position: fixed;
+  background: url("../images/skating-poster1.jpg") no-repeat center center;
+  height: 600px;
+  width: 100%;
+  background-size: cover; }
+
+.container {
+  position: relative;
+  margin-top: 38px; }
+
+.banner {
+  height: 600px; }
+  .banner > div {
+    height: 140px;
+    position: relative;
+    top: 460px;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.section {
+  background-color: #efefef;
+  border-bottom: 2px solid #dedede;
+  padding: 30px 0; }
+  .section .content {
+    width: 1000px;
+    margin: auto; }
+  .section.upcoming-events {
+    border-bottom: none;
+    padding-bottom: 0px; }
+
+#homepage-map {
+  height: 500px;
+  width: 950px;
+  margin: 0 auto;
+  padding-top: 50px; }
+
+.event-timeline {
+  width: 100%;
+  height: 130px; }
+  .event-timeline .refline {
+    stroke: #00aaff; }
+  .event-timeline .event circle {
+    opacity: 0.75; }
+  .event-timeline .event text {
+    font-size: 9px;
+    fill: #FFF; }
+  .event-timeline .event:hover {
+    cursor: pointer; }
+  .event-timeline .month line {
+    stroke: #000000;
+    stroke-width: 1px; }
+  .event-timeline .month text {
+    font-size: 14px; }
+  .event-timeline .event-pointer line, .event-timeline .event-pointer polyline {
+    stroke-width: 2px;
+    stroke: #ffd21f;
+    fill: none; }
+
+.event-timeline-details {
+  display: none; }
+  .event-timeline-details div {
+    padding: 0 20px; }
+  .event-timeline-details .heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .event-timeline-details .info {
+    font-size: 12px; }
+
+.featured {
+  margin-top: 20px; }
+  .featured .tile {
+    width: 325px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    margin: 5px 0;
+    display: inline-block; }
+    .featured .tile img {
+      width: 100%;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px; }
+    .featured .tile .info {
+      padding: 15px; }
+      .featured .tile .info .heading {
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: #333333; }
+      .featured .tile .info .details {
+        font-size: 12px;
+        color: #535353;
+        line-height: 16px; }

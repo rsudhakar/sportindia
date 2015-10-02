@@ -1,0 +1,15 @@
+@font-face {
+  font-family: default;
+  src: url("../fonts/OpenSans-Regular.ttf"); }
+body {
+  background-color: #efefef;
+  font-family: default; }
+
+.sitename {
+  display: inline-block;
+  color: #00aaff; }
+  .sitename span {
+    color: #ffd21f; }
+
+li {
+  padding: 4px 0; }
