@@ -5,75 +5,43 @@
   padding: 15px 0;
 }
 
+.header {
+  .content {
+    .games {
+      padding-left: 100px;
+    }
+  }
+}
+
 .site-name-container {
   position: fixed;
   z-index: 200;
-  top:0;
-  left:0;
-  width: 100%;
-
-  >div {
-    width: $width;
-    margin: 0 auto;
-  }
-
-  .sitename {
-    top: 500px;
-    left: 342px;
-    font-size:72px;
-    border-radius:15px;
-  }
-
-  .site-label {
-    position: relative;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 5px;
-  }
-
-  .caption {
-    text-align: center;
-  }
-
-}
-
-.header {
-  position: fixed;
-  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $color-darkgray;
 
-  .content {
+  > div {
     width: $width;
     margin: 0 auto;
+  }
 
-    .games {
-      display: inline-block;
-      padding-left: 100px;
+  .site-label {
+    background-color: rgba(0, 0, 0, 0); //initialize it to hidden for seamless loading. animation will show it
 
-      > div {
-        display: inline-block;
-        padding: 10px;
-      }
-
-      > div.selected {
-        background-color: $color-gray;
-        font-weight: bold;
-      }
-
+    .caption {
+      text-align: center;
+      color: rgba(255, 255, 255, 0); //initialize it to hidden for seamless loading. animation will show it
     }
 
-    .login {
-      float: right;
-      display: inline-block;
-      padding: 10px;
+    .sitename {
+      top: 500px;
+      left: 342px;
+      font-size: 0; //initialize it to 0 for seamless loading. animation will show it
+      border-radius: 15px;
     }
-
   }
 }
+
 
 .backdrop {
   position: fixed;
@@ -83,39 +51,23 @@
   background-size: cover;
 }
 
-.container {
-  position: relative;
-  margin-top: 38px;
-}
-
 .banner {
   height: 600px;
 
-  >div {
+  > div {
     height: 140px;
     position: relative;
     top: 460px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
 .section {
-  background-color: $color-gray;
-  border-bottom: 2px solid $color-darkgray;
-  padding: 30px 0;
-
-  .content {
-    width: $width;
-    margin: auto;
-  }
-
   &.upcoming-events {
     border-bottom: none;
     padding-bottom: 0px;
   }
 }
-
-
 
 #homepage-map {
   height: 500px;
