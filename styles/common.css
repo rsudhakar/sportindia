@@ -1,6 +1,9 @@
 @font-face {
   font-family: default;
   src: url("../fonts/OpenSans-Regular.ttf"); }
+@font-face {
+  font-family: planer;
+  src: url("../fonts/Planer-Regular.otf"); }
 body {
   background-color: #efefef;
   font-family: default; }
@@ -8,7 +11,7 @@ body {
 .site-label {
   position: relative;
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   border-radius: 0; }
 
@@ -21,37 +24,41 @@ body {
 li {
   padding: 4px 0; }
 
+a {
+  text-decoration: none; }
+
 .header {
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #dedede; }
+  background-color: rgba(0, 0, 0, 0.5); }
   .header .content {
-    width: 1000px;
+    width: 900px;
     margin: 0 auto; }
     .header .content .games {
-      display: inline-block; }
+      display: inline-block;
+      color: #ffffff; }
       .header .content .games > div {
         display: inline-block;
         padding: 10px; }
       .header .content .games > div.selected {
         background-color: #efefef;
-        font-weight: bold; }
+        font-weight: bold;
+        color: #000000; }
     .header .content .login {
       float: right;
       display: inline-block;
       padding: 10px; }
 
 .container {
-  position: relative;
-  margin-top: 38px; }
+  position: relative; }
 
 .section {
   background-color: #efefef;
-  border-bottom: 2px solid #dedede;
+  border-bottom: 2px solid #bfbfbf;
   padding: 30px 0; }
   .section .content {
-    width: 1000px;
+    width: 900px;
     margin: auto; }

@@ -1,15 +1,6 @@
 function initEventMap() {
-    var mapCanvas = document.getElementById('event-location-map');
-    //https://developers.google.com/maps/documentation/javascript/3.exp/reference
-    var mapOptions = {
-        center: new google.maps.LatLng(13.082680, 80.270718),
-        zoom: 12,
-        minZoom: 10,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false,
-        scrollwheel: false
-    };
-    var map = new google.maps.Map(mapCanvas, mapOptions)
+    var locationMap = new LocationMap('#location-map');
+    locationMap.mark(13.082370, 80.258861, 'Event name');
 }
 
 function categoryToggler() {
@@ -25,4 +16,3 @@ function init() {
 }
 
 google.maps.event.addDomListener(window, 'load', init);
-categoryToggler();

@@ -6,12 +6,15 @@
     <link rel="shortcut icon" href="images/favicon3.png"/>
 
     <link rel="stylesheet" href="styles/normalize.css"/>
-    <link rel="stylesheet" href="styles/event.css"/>
+    <link rel="stylesheet" href="styles/lightbox.css"/>
+    <link rel="stylesheet" href="styles/detail.css"/>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <script src="scripts/lib/jquery.min.js"></script>
+    <script src="scripts/lib/lightbox.min.js"></script>
 
+    <script src="scripts/locationMap.js"></script>
     <script src="scripts/event.js"></script>
 
 </head>
@@ -57,15 +60,15 @@
             </div>
         </div>
 
-        <div id="event-location-map"></div>
+        <div id="location-map"></div>
     </div>
 
     <div class="section">
         <div class="content">
-            <div class="event-tile">
+            <div class="detail-tile">
                 <div class="heading">Categories</div>
                 <div class="details">
-                    <div class="categories">
+                    <div class="event-categories">
                         <div class="type expanded">
                             <div class="category-label">Under 10 (Born on or after 1 Jan 2006)</div>
                             <div class="category-details">
@@ -109,7 +112,7 @@
     <div class="section">
         <div class="content">
 
-            <div class="event-tile">
+            <div class="detail-tile">
                 <div class="heading">Rules</div>
                 <div class="details">
                     <ol>
@@ -125,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="event-tile">
+            <div class="detail-tile">
                 <div class="heading">More Info</div>
                 <div class="details">
                     <ol>
@@ -134,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="event-tile">
+            <div class="detail-tile">
                 <div class="heading">Organizers</div>
                 <div class="details">
                     <ul>

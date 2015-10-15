@@ -1,12 +1,17 @@
-$width: 1000px;
+$width: 900px;
 $color-gray: #EFEFEF;
-$color-darkgray: #dedede;
+$color-darkgray: #bfbfbf;
 $color-logo-blue: #00aaff;
 $color-logo-yellow: #ffd21f;
 
 @font-face {
   font-family: default;
   src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: planer;
+  src: url("../fonts/Planer-Regular.otf");
 }
 
 body {
@@ -17,7 +22,7 @@ body {
 .site-label {
   position: relative;
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   border-radius: 0;
 }
@@ -34,13 +39,17 @@ li {
   padding: 4px 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $color-darkgray;
+  background-color: rgba(0, 0, 0, 0.5);
 
   .content {
     width: $width;
@@ -48,6 +57,7 @@ li {
 
     .games {
       display: inline-block;
+      color: #ffffff;
 
       > div {
         display: inline-block;
@@ -57,6 +67,7 @@ li {
       > div.selected {
         background-color: $color-gray;
         font-weight: bold;
+        color: #000000;
       }
 
     }
@@ -72,7 +83,6 @@ li {
 
 .container {
   position: relative;
-  margin-top: 38px;
 }
 
 .section {

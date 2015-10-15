@@ -1,25 +1,83 @@
 @import 'common';
 
-.event-header {
+@mixin header-bg {
+  position: relative;
   &:before {
     content: "";
-    background: url('../temp/badminton2.jpg') no-repeat top center;
-    background-size: 100%;
     display: inline-block;
     width: 100%;
-    height: 200px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-filter: blur(35px);
-    -moz-filter: blur(35px);
-    -o-filter: blur(35px);
-    -ms-filter: blur(35px);
-    filter: blur(35px);
+    //-webkit-filter: blur(1px);
+    //-moz-filter: blur(1px);
+    //-o-filter: blur(1px);
+    //-ms-filter: blur(1px);
+    //filter: blur(1px);
   }
 
   .content {
     position: relative;
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 36px;
+    vertical-align: top;
+    padding: 40px;
+    text-align: center;
+
+    .sub-title {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    .details {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+  }
+
+}
+
+
+.tennis-icon {
+  background-image: url('../images/racket1.png');
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.playground-header {
+  @include header-bg();
+  height: 400px;
+  padding: 0;
+  &:before {
+    background: url('../temp/shuttle1.JPG') no-repeat center center;
+    background-size: 100%;
+  }
+
+  .header {
+    width: 50%;
+  }
+
+  #location-map {
+    width: 400px;
+    height: 400px;
+    float: right;
+    margin: 50px 20px -15px 0;
+    box-sizing: border-box;
+    border: 1px solid $color-logo-blue;
+  }
+}
+
+.event-header {
+  @include header-bg();
+  &:before {
+    background: url('../temp/badminton2.jpg') no-repeat top center;
+    background-size: 100%;
   }
 
   .event-title {
@@ -45,27 +103,14 @@
     }
   }
 
-  .title {
-    display: inline-block;
-    font-size: 36px;
-    vertical-align: top;
-    padding: 40px;
-    text-align: center;
-
-    .sub-title {
-      font-size: 18px;
-      padding-top: 10px;
-    }
-
-    .details {
-      font-size: 16px;
-      padding-top: 15px;
-    }
+  #location-map {
+    width: 100%;
+    height: 300px;
   }
 
 }
 
-.event-tile {
+.detail-tile {
   display: inline-block;
   margin: 15px;
   width: 100%;
@@ -80,17 +125,15 @@
     margin-bottom: 20px;
     border-bottom: 1px solid $color-logo-blue;
     width: 100%;
+    .details {
+      font-size: 14px;
+      padding-top: 5px;
+    }
   }
 
 }
 
-#event-location-map {
-  width: 100%;
-  height: 300px;
-}
-
-.categories {
-
+.event-categories {
   .type.collapsed {
     .category-label {
       background-color: $color-logo-yellow;
@@ -182,4 +225,21 @@
     }
   }
 
+}
+
+.court-info {
+  td {
+    padding: 5px;
+  }
+  .type {
+    width: 100px;
+  }
+}
+
+.info-tag {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+  min-width: 100px;
 }

@@ -2,8 +2,8 @@ var TimelineWidget = function(svgSelector) {
 
     var svg = d3.select(svgSelector);
     var timeScale = d3.time.scale()
-        .domain([moment().toDate(), moment().add(3, 'months').toDate()])
-        .range([0, 1000]);
+        .domain([moment().startOf('month').toDate(), moment().startOf('month').add(3, 'months').toDate()])
+        .range([1, 900]);
     //var colors = d3.scale.category10();
     var eventData;
     var monthData;
@@ -22,7 +22,7 @@ var TimelineWidget = function(svgSelector) {
     var drawEvents = function() {
         svg.selectAll(".refline").data([true])
             .enter().append("line").classed("refline", true)
-            .attr("x1", 0).attr("y1",50).attr("x2", 1000).attr("y2", 50);
+            .attr("x1", 0).attr("y1",50).attr("x2", 900).attr("y2", 50);
 
         var eventElements = svg.selectAll(".event").data(eventData);
         var newEventElements = eventElements.enter().append("g").classed("event", true);
@@ -74,7 +74,7 @@ var TimelineWidget = function(svgSelector) {
             .attr("x2", function(d) { return timeScale(d.date)})
             .attr("y2", 120);
         eventPointer.select("polyline")
-            .attr("points","1 130 1 120 999 120 999 130");
+            .attr("points","1 130 1 120 899 120 899 130");
         $(".event-timeline-details").show();
     };
 

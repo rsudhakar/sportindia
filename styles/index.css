@@ -1,6 +1,9 @@
 @font-face {
   font-family: default;
   src: url("../fonts/OpenSans-Regular.ttf"); }
+@font-face {
+  font-family: planer;
+  src: url("../fonts/Planer-Regular.otf"); }
 body {
   background-color: #efefef;
   font-family: default; }
@@ -8,7 +11,7 @@ body {
 .site-label {
   position: relative;
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   border-radius: 0; }
 
@@ -21,39 +24,43 @@ body {
 li {
   padding: 4px 0; }
 
+a {
+  text-decoration: none; }
+
 .header {
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #dedede; }
+  background-color: rgba(0, 0, 0, 0.5); }
   .header .content {
-    width: 1000px;
+    width: 900px;
     margin: 0 auto; }
     .header .content .games {
-      display: inline-block; }
+      display: inline-block;
+      color: #ffffff; }
       .header .content .games > div {
         display: inline-block;
         padding: 10px; }
       .header .content .games > div.selected {
         background-color: #efefef;
-        font-weight: bold; }
+        font-weight: bold;
+        color: #000000; }
     .header .content .login {
       float: right;
       display: inline-block;
       padding: 10px; }
 
 .container {
-  position: relative;
-  margin-top: 38px; }
+  position: relative; }
 
 .section {
   background-color: #efefef;
-  border-bottom: 2px solid #dedede;
+  border-bottom: 2px solid #bfbfbf;
   padding: 30px 0; }
   .section .content {
-    width: 1000px;
+    width: 900px;
     margin: auto; }
 
 .heading1 {
@@ -70,7 +77,7 @@ li {
   left: 0;
   width: 100%; }
   .site-name-container > div {
-    width: 1000px;
+    width: 900px;
     margin: 0 auto; }
   .site-name-container .site-label {
     background-color: transparent; }
@@ -82,29 +89,54 @@ li {
       left: 342px;
       font-size: 0;
       border-radius: 15px; }
+  .site-name-container .global-search {
+    position: relative;
+    top: 374px; }
+    .site-name-container .global-search input {
+      border: 1px solid #ffd21f;
+      border-radius: 4px;
+      padding: 10px;
+      padding-left: 30px;
+      font-size: 16px;
+      width: 250px;
+      color: #ffffff;
+      background: black url("../images/search-icon.png") no-repeat center left;
+      background-position-x: 8px;
+      background-position-y: 11px;
+      background-size: 15px; }
+
+.global-search {
+  float: right; }
 
 .backdrop {
   position: fixed;
-  background: url("../images/skating-poster1.jpg") no-repeat center center;
+  background: url("../images/football-poster1.jpg") no-repeat center center;
   height: 600px;
   width: 100%;
   background-size: cover; }
 
 .banner {
-  height: 600px; }
-  .banner > div {
-    height: 140px;
+  height: 450px; }
+  .banner .banner-bg {
+    height: 120px;
     position: relative;
-    top: 460px;
+    top: 330px;
     background-color: rgba(0, 0, 0, 0.5); }
 
 .section.upcoming-events {
   border-bottom: none;
   padding-bottom: 0px; }
 
+.controls {
+  padding: 5px;
+  margin: 10px;
+  font-size: 14px;
+  font-family: default;
+  width: 300px; }
+
 #homepage-map {
   height: 500px;
-  width: 950px;
+  width: 850px;
   margin: 0 auto;
   padding-top: 50px; }
 
@@ -144,13 +176,28 @@ li {
 .featured {
   margin-top: 20px; }
   .featured .tile {
-    width: 325px;
+    width: 290px;
     box-sizing: border-box;
     background-color: white;
-    border: 1px solid #dedede;
+    border: 1px solid #bfbfbf;
     border-radius: 6px;
     margin: 5px 0;
     display: inline-block; }
+    .featured .tile .date {
+      position: absolute;
+      width: 140px;
+      height: 50px;
+      top: 12px;
+      left: -34px;
+      text-align: center;
+      padding: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #00aaff;
+      box-sizing: border-box;
+      background-image: url("../images/side-band.png");
+      background-repeat: no-repeat;
+      transform: rotate(-45deg); }
     .featured .tile img {
       width: 100%;
       border-top-left-radius: 6px;
@@ -158,10 +205,13 @@ li {
     .featured .tile .info {
       padding: 15px; }
       .featured .tile .info .heading {
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: bold;
         margin-bottom: 15px;
         color: #333333; }
       .featured .tile .info .details {
-        font-size: 12px;
+        font-size: 15px;
         color: #535353;
-        line-height: 16px; }
+        line-height: 18px;
+        letter-spacing: 0;
+        color: #696868; }

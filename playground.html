@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SportIndia</title>
+    <link rel="shortcut icon" href="images/favicon3.png"/>
+
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link rel="stylesheet" href="styles/lightbox.css"/>
+    <link rel="stylesheet" href="styles/detail.css"/>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="scripts/lib/jquery.min.js"></script>
+
+    <script src="scripts/locationMap.js"></script>
+    <script src="scripts/playground.js"></script>
+
+</head>
+<body>
+
+<div class="header">
+    <div class="content">
+        <div class="site-label">
+            <div class="sitename">
+                <span>sport</span>India
+            </div>
+        </div>
+
+        <div class="games">
+            <div>Cricket</div>
+            <div class="selected">Football</div>
+            <div>Tennis</div>
+            <div>Badminton</div>
+            <div>Hockey</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="section playground-header">
+        <div id="location-map"></div>
+        <div class="content">
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="content">
+
+            <div class="detail-tile">
+                <div class="heading">
+                    <div class="tennis-icon"></div>
+                    <div style="display:inline-block">
+                        Army Officers Training Centre
+                        <div class="details">
+                            Mohite Park, Alandur, Chennai
+                        </div>
+                    </div>
+
+                </div>
+                <div class="details">
+                    <div class="facility-details">
+                        <table class="court-info">
+                            <tr>
+                                <td class="type">Area</td>
+                                <td>
+                                    <div class="info-tag">3 Courts</div>
+                                    <div class="info-tag">Mat surface</div>
+                                    <div class="info-tag">Car parking</div>
+                                    <div class="info-tag">Flood lights</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="type">Timings</td>
+                                <td>
+                                    <div class="info-tag">6 - 7 AM</div>
+                                    <div class="info-tag">7 - 8 AM</div>
+                                    <div class="info-tag">7 - 8 PM</div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="content">
+            <div class="detail-tile">
+                <div class="heading">
+                    Photos
+                </div>
+                <div class="details">
+                    <a href="temp/badminton1.jpg" data-lightbox="playground">
+                        <img src="temp/badminton1.jpg" alt="First image" />
+                    </a>
+                    <a href="temp/badminton2.jpg" data-lightbox="playground">Image #2</a>
+                    <a href="temp/shuttle1.JPG" data-lightbox="playground">Image #3</a>
+                    <a href="temp/shuttle2.jpg" data-lightbox="playground">Image #4</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="content">
+            <div class="detail-tile">
+                <div class="heading">
+                    Reviews
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/lib/lightbox.min.js"></script>
+</body>
+</html>

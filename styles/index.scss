@@ -40,24 +40,57 @@
       border-radius: 15px;
     }
   }
+
+  .global-search {
+    position: relative;
+    top: 374px;
+
+    //.search-icon {
+    //  display: inline-block;
+    //  border: 1px solid $color-logo-yellow;
+    //  border-top-left-radius: 4px;
+    //  border-bottom-left-radius: 4px;
+    //  background: url("../images/search-icon.png");
+    //  width: 50px;
+    //  height: 50px;
+    //}
+
+    input {
+      border: 1px solid $color-logo-yellow;
+      border-radius: 4px;
+      padding: 10px;
+      padding-left: 30px;
+      font-size: 16px;
+      width: 250px;
+      color: #ffffff;
+      background: black url("../images/search-icon.png") no-repeat center left;
+      background-position-x: 8px;
+      background-position-y: 11px;
+      background-size: 15px;
+    }
+  }
+}
+
+.global-search {
+  float: right;
 }
 
 
 .backdrop {
   position: fixed;
-  background: url('../images/skating-poster1.jpg') no-repeat center center;
+  background: url('../images/football-poster1.jpg') no-repeat center center;
   height: 600px;
   width: 100%;
   background-size: cover;
 }
 
 .banner {
-  height: 600px;
+  height: 450px;
 
-  > div {
-    height: 140px;
+  .banner-bg {
+    height: 120px;
     position: relative;
-    top: 460px;
+    top: 330px;
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
@@ -67,6 +100,14 @@
     border-bottom: none;
     padding-bottom: 0px;
   }
+}
+
+.controls {
+  padding: 5px;
+  margin: 10px;
+  font-size: 14px;
+  font-family: default;
+  width: 300px;
 }
 
 #homepage-map {
@@ -131,13 +172,30 @@
   margin-top: 20px;
 
   .tile {
-    width: 325px;
+    width: 290px;
     box-sizing: border-box;
     background-color: white;
     border: 1px solid $color-darkgray;
     border-radius: 6px;
     margin: 5px 0;
     display: inline-block;
+
+    .date {
+      position: absolute;
+      width: 140px;
+      height: 50px;
+      top: 12px;
+      left: -34px;
+      text-align: center;
+      padding: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      color: $color-logo-blue;
+      box-sizing: border-box;
+      background-image: url("../images/side-band.png");
+      background-repeat: no-repeat;
+      transform: rotate(-45deg);
+    }
 
     img {
       width: 100%;
@@ -149,17 +207,19 @@
       padding: 15px;
 
       .heading {
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: bold;
         margin-bottom: 15px;
         color: #333333;
       }
 
       .details {
-        font-size: 12px;
+        font-size: 15px;
         color: #535353;
-        line-height: 16px;
+        line-height: 18px;
+        letter-spacing: 0;
+        color: #696868;
       }
     }
   }
 }
-

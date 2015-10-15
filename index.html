@@ -6,10 +6,9 @@
     <link rel="shortcut icon" href="images/favicon3.png"/>
 
     <link rel="stylesheet" href="styles/normalize.css"/>
-    <link rel="stylesheet" href="styles/common.css"/>
     <link rel="stylesheet" href="styles/index.css"/>
 
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <script src="scripts/lib/jquery.min.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>-->
@@ -31,8 +30,8 @@
 <div class="site-name-container">
     <div>
         <div class="site-label"
-             data-0="top:500px;left:320px;padding:15px 40px;border-radius:15px;background-color:rgba(0,0,0,0);"
-             data-200="top:0px;left:0px;padding:10px 10px;border-radius:0px;background-color:rgba(0,0,0,0.5);">
+             data-0="top:320px;padding:15px 40px;border-radius:15px;background-color:rgba(0,0,0,0);"
+             data-200="top:0px;left:0px;padding:10px 10px;border-radius:0px;background-color:rgba(0,0,0,0.3);">
             <div class="sitename" data-0="font-size:72px;" data-100="font-size:16px">
                 <span>sport</span>India
             </div>
@@ -40,6 +39,14 @@
                 Sport for All. Enjoi the Game
             </div>
         </div>
+
+        <div class="global-search"
+             data-0="right:0px"
+             data-1="right:-1000px">
+            <!--<div class="search-icon"> </div>-->
+            <input type="text" placeholder="Search an Event/Playground"/>
+        </div>
+
     </div>
 </div>
 
@@ -66,7 +73,7 @@
     <div class="container">
 
         <div class="banner">
-            <div data-0="background-color: rgba(0,0,0,0.5)"
+            <div class="banner-bg" data-0="background-color: rgba(0,0,0,0.5)"
                  data-200="background-color: rgba(0,0,0,0)"></div>
         </div>
 
@@ -74,6 +81,7 @@
             <div class="content">
                 <div>
                     <div class="heading1">Find Playground / Training Center near you</div>
+                    <input id="homepage-map-input" class="controls" type="text" placeholder="Select area">
                     <div id="homepage-map"></div>
                 </div>
 
@@ -102,6 +110,7 @@
                 <div class="heading1">Featured</div>
                 <div class="featured">
                     <a class="tile" href="event.html">
+                        <div class="date">15 Nov</div>
                         <img src="temp/badminton1.jpg"/>
 
                         <div class="info">
@@ -121,19 +130,18 @@
                         </div>
                     </div>
                     <div class="tile">
+                        <div class="date">12 Oct</div>
                         <img src="temp/tennis1.jpg"/>
 
                         <div class="info">
                             <div class="heading">Nazareth Cup</div>
                             <div class="details">Singaram pillai tennis premier league - Nazerath cup is an open league
-                                Tennis tournament and is all set to begin on August 2nd , 2015. The tournament will have
-                                initial League phase matches followed by knock-out stage. The matches will be scheduled
-                                on
-                                Sundays and will continue for a duration of 6-8 weeks
+                                Tennis tournament and is all set to begin on August 2nd , 2015
                             </div>
                         </div>
                     </div>
                     <div class="tile">
+                        <div class="date">28 Oct</div>
                         <img src="temp/badminton2.jpg"/>
 
                         <div class="info">
