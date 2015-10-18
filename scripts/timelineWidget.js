@@ -8,7 +8,7 @@ var TimelineWidget = function(svgSelector) {
     var eventData;
     var monthData;
 
-    var render = function(data) {
+  var render = function(data) {
         eventData = data;
         monthData = getFirstOfEachMonth(timeScale.domain());
         refresh();

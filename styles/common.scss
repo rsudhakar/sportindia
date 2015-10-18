@@ -5,18 +5,18 @@ $color-logo-blue: #00aaff;
 $color-logo-yellow: #ffd21f;
 
 @font-face {
-  font-family: default;
+  font-family: "chosen";
   src: url('../fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
-  font-family: planer;
-  src: url("../fonts/Planer-Regular.otf");
+  font-family: "improved";
+  src: url("../fonts/Quicksand-Regular.otf");
 }
 
 body {
   background-color: $color-gray;
-  font-family: default;
+  font-family: chosen;
 }
 
 .site-label {
@@ -28,6 +28,7 @@ body {
 }
 
 .sitename {
+  font-family: sans-serif;
   display: inline-block;
   color: $color-logo-blue;
   span {

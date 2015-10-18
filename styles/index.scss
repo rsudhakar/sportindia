@@ -115,6 +115,10 @@
   width: ($width - 50);
   margin: 0 auto;
   padding-top: 50px;
+
+  #homepage-map-input {
+    border: 1px solid $color-gray;
+  }
 }
 
 .event-timeline {

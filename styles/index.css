@@ -1,12 +1,12 @@
 @font-face {
-  font-family: default;
+  font-family: "chosen";
   src: url("../fonts/OpenSans-Regular.ttf"); }
 @font-face {
-  font-family: planer;
-  src: url("../fonts/Planer-Regular.otf"); }
+  font-family: "improved";
+  src: url("../fonts/Quicksand-Regular.otf"); }
 body {
   background-color: #efefef;
-  font-family: default; }
+  font-family: chosen; }
 
 .site-label {
   position: relative;
@@ -16,6 +16,7 @@ body {
   border-radius: 0; }
 
 .sitename {
+  font-family: sans-serif;
   display: inline-block;
   color: #00aaff; }
   .sitename span {
@@ -139,6 +140,8 @@ a {
   width: 850px;
   margin: 0 auto;
   padding-top: 50px; }
+  #homepage-map #homepage-map-input {
+    border: 1px solid #efefef; }
 
 .event-timeline {
   width: 100%;

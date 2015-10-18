@@ -12,8 +12,11 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <script src="scripts/lib/jquery.min.js"></script>
+    <script src="scripts/lib/lodash.min.js"></script>
+    <script src="scripts/lib/d3.min.js"></script>
 
     <script src="scripts/locationMap.js"></script>
+    <script src="scripts/slotsWidget.js"></script>
     <script src="scripts/playground.js"></script>
 
 </head>
@@ -49,7 +52,7 @@
         <div class="content">
 
             <div class="detail-tile">
-                <div class="heading">
+                <div class="heading playground-name">
                     <div class="tennis-icon"></div>
                     <div style="display:inline-block">
                         Army Officers Training Centre
@@ -60,27 +63,25 @@
 
                 </div>
                 <div class="details">
+                    <div class="playground-info">
+                       Established in the year 2004 in T.Nagar.
+                       Classes are taken in 2 skate grounds at the ratio of 10: 1 student and coach.
+                       Chennai sports academy also conduct tournaments
+                    </div>
                     <div class="facility-details">
                         <table class="court-info">
                             <tr>
-                                <td class="type">Area</td>
                                 <td>
                                     <div class="info-tag">3 Courts</div>
                                     <div class="info-tag">Mat surface</div>
                                     <div class="info-tag">Car parking</div>
                                     <div class="info-tag">Flood lights</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="type">Timings</td>
-                                <td>
-                                    <div class="info-tag">6 - 7 AM</div>
-                                    <div class="info-tag">7 - 8 AM</div>
-                                    <div class="info-tag">7 - 8 PM</div>
+                                    <div class="info-tag">Changing rooms</div>
+                                    <div class="info-tag">Public announcement systems</div>
+                                    <div class="info-tag">Fitness trainer</div>
                                 </td>
                             </tr>
                         </table>
-
                     </div>
                 </div>
             </div>
@@ -90,17 +91,42 @@
 
     <div class="section">
         <div class="content">
+          <div class="detail-tile">
+            <div class="heading">
+              Timings
+            </div>
+            <div class="details">
+                <div class="timings">
+                  <svg id="timingsWidget"></svg>
+                  <div class="legend"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="content">
             <div class="detail-tile">
                 <div class="heading">
                     Photos
                 </div>
-                <div class="details">
-                    <a href="temp/badminton1.jpg" data-lightbox="playground">
-                        <img src="temp/badminton1.jpg" alt="First image" />
+                <div class="details photos">
+                    <a href="temp/court1.jpg" data-lightbox="playground">
+                        <img src="temp/court1.jpg" alt="First image" />
                     </a>
-                    <a href="temp/badminton2.jpg" data-lightbox="playground">Image #2</a>
-                    <a href="temp/shuttle1.JPG" data-lightbox="playground">Image #3</a>
-                    <a href="temp/shuttle2.jpg" data-lightbox="playground">Image #4</a>
+                    <a href="temp/court2.jpg" data-lightbox="playground">
+                        <img src="temp/court2.jpg" alt="First image" />
+                    </a>
+                    <a href="temp/court3.jpg" data-lightbox="playground">
+                        <img src="temp/court3.jpg" alt="First image" />
+                    </a>
+                    <a href="temp/court4.jpg" data-lightbox="playground">
+                        <img src="temp/court4.jpg" alt="First image" />
+                    </a>
+                    <a href="temp/court5.jpg" data-lightbox="playground">
+                        <img src="temp/court5.jpg" alt="First image" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -111,6 +137,31 @@
             <div class="detail-tile">
                 <div class="heading">
                     Reviews
+                </div>
+                <div class="details">
+                  <div class="review">
+                    <div class="date">
+                      <div>19 Oct 2015</div>
+                    </div>
+                    <div class="message"> Very good court to play and friendly coach who also push our limits to learn better </div>
+                    <div class="reviewer"> Sudhakar R </div>
+                  </div>
+                  <div class="review">
+                    <div class="date">
+                      <div>1 Aug 2015</div>
+                    </div>
+                    <div class="message"> To keep long story short... <br/>
+                      I am testing the reviews which are multiline </br>
+                      That can go on and on and on.... </div>
+                    <div class="reviewer"> Asmi S </div>
+                  </div>
+                  <div class="review">
+                    <div class="date">
+                      <div>12 Jan 2014</div>
+                    </div>
+                    <div class="message"> Very honest and professional institution </div>
+                    <div class="reviewer"> Anand A </div>
+                  </div>
                 </div>
             </div>
         </div>

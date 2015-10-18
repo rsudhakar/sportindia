@@ -38,7 +38,10 @@
       padding-top: 15px;
     }
   }
+}
 
+.section {
+  border-bottom: none;
 }
 
 
@@ -108,6 +111,14 @@
     height: 300px;
   }
 
+}
+
+.playground-name {
+  font-weight: bold;
+}
+
+.playground-info {
+  padding-bottom: 30px;
 }
 
 .detail-tile {
@@ -224,7 +235,6 @@
       background: url("../images/win.png") no-repeat center center;
     }
   }
-
 }
 
 .court-info {
@@ -240,6 +250,78 @@
   display: inline-block;
   padding: 10px;
   margin-right: 10px;
+  margin-top: 10px;
   border: 1px solid #ffffff;
   min-width: 100px;
+}
+
+.photos {
+  a img {
+    height: 100px;
+  }
+}
+
+.review {
+  position: relative;
+  padding: 20px 0;
+
+  .date {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    border-right: 1px solid $color-logo-blue;
+    border-top: 1px solid $color-gray;
+    background-color: rgba(255,255,255,0.5);
+
+    >div {
+      font-size: 12px;
+      position: absolute;
+      display:inline-block;
+      text-align: center;
+      padding: 2px 4px;
+
+      &:after {
+        content: "\2022";
+        font-size: 32px;
+        position: absolute;
+        right: -7px;
+        top: -13px;
+        color: $color-logo-blue;
+      }
+    }
+  }
+
+  .message, .reviewer {
+    padding-left: 70px;
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .reviewer {
+    &:before {
+      content: "-"
+    }
+
+    text-align: right;
+  }
+}
+
+#timingsWidget {
+  width: 800px;
+  height: 500px;
+  font-size: 14px;
+
+  .dayLines, .timeTick {
+    stroke-width: 1px;
+    stroke: $color-darkgray;
+  }
+}
+
+.legend {
+  text-align: center;
+  .item {
+    display: inline-block;
+    font-size: 13px;
+    padding: 5px 10px;
+  }
 }
