@@ -44,7 +44,6 @@
   border-bottom: none;
 }
 
-
 .tennis-icon {
   background-image: url('../images/racket1.png');
   background-size: 50px 50px;
@@ -66,13 +65,23 @@
     width: 50%;
   }
 
-  #location-map {
-    width: 400px;
-    height: 400px;
+  .location-container {
     float: right;
     margin: 50px 20px -15px 0;
     box-sizing: border-box;
-    border: 1px solid $color-logo-blue;
+
+    #location-map {
+      width: 400px;
+      height: 400px;
+      border: 1px solid $color-logo-blue;
+    }
+
+    .address {
+      font-size: 14px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid $color-logo-yellow;
+    }
   }
 }
 
@@ -114,7 +123,40 @@
 }
 
 .playground-name {
-  font-weight: bold;
+
+  .name {
+    font-weight: bold;
+    font-size: 34px;
+    display: inline-block;
+
+    .details {
+      font-weight: normal;
+      .name {
+        font-size: 16px;
+        display: inline-block;
+      }
+      .contact {
+        display: inline-block;
+        line-height: 24px;
+
+        & > div {
+          display: inline-block;
+        }
+
+        &:before {
+          font-family: "fontello";
+          content: '( \e80b';
+          font-size: 24px;
+          padding: 0 5px;
+        }
+
+        &:after {
+          content: ")";
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }
 
 .playground-info {
@@ -241,18 +283,23 @@
   td {
     padding: 5px;
   }
-  .type {
+  .segment {
     width: 100px;
   }
-}
 
-.info-tag {
-  display: inline-block;
-  padding: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  border: 1px solid #ffffff;
-  min-width: 100px;
+  i {
+    color: $color-logo-blue;
+  }
+
+  .info-tag {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    //border: 1px solid #ffffff;
+    //min-width: 100px;
+  }
+
 }
 
 .photos {
@@ -271,12 +318,12 @@
     position: absolute;
     border-right: 1px solid $color-logo-blue;
     border-top: 1px solid $color-gray;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 
-    >div {
+    > div {
       font-size: 12px;
       position: absolute;
-      display:inline-block;
+      display: inline-block;
       text-align: center;
       padding: 2px 4px;
 
@@ -318,10 +365,16 @@
 }
 
 .legend {
-  text-align: center;
+  text-align: left;
   .item {
     display: inline-block;
-    font-size: 13px;
+    cursor: pointer;
+    font-size: 16px;
     padding: 5px 10px;
+    border: 1px solid $color-darkgray;
+    border-radius: 10px;
+    margin: 4px;
+    width: 30%;
+
   }
 }

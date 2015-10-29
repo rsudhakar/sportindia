@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/normalize.css"/>
     <link rel="stylesheet" href="styles/lightbox.css"/>
     <link rel="stylesheet" href="styles/detail.css"/>
+    <link rel="stylesheet" href="styles/fontello.css"/>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
@@ -43,9 +44,13 @@
 <div class="container">
 
     <div class="section playground-header">
-        <div id="location-map"></div>
-        <div class="content">
+        <div class="location-container">
+            <div id="location-map"></div>
+            <div class="address">
+                Mohite Park, Alandur, Chennai
+            </div>
         </div>
+
     </div>
 
     <div class="section">
@@ -54,10 +59,13 @@
             <div class="detail-tile">
                 <div class="heading playground-name">
                     <div class="tennis-icon"></div>
-                    <div style="display:inline-block">
+                    <div class="name">
                         Army Officers Training Centre
                         <div class="details">
-                            Mohite Park, Alandur, Chennai
+                            <div class="name">Mr. Rangadurai V</div>
+                            <div class="contact">
+                                <div>97988934444</div>
+                            </div>
                         </div>
                     </div>
 
@@ -72,13 +80,17 @@
                         <table class="court-info">
                             <tr>
                                 <td>
-                                    <div class="info-tag">3 Courts</div>
-                                    <div class="info-tag">Mat surface</div>
-                                    <div class="info-tag">Car parking</div>
-                                    <div class="info-tag">Flood lights</div>
-                                    <div class="info-tag">Changing rooms</div>
-                                    <div class="info-tag">Public announcement systems</div>
-                                    <div class="info-tag">Fitness trainer</div>
+                                    <div class="info-tag"><i class="icon-columns"></i> 3 Courts</div>
+                                    <div class="info-tag"><i class="icon-th"></i> Mat surface</div>
+                                    <div class="info-tag"><i class="icon-lightbulb"></i> Flood lights</div>
+                                    <div class="info-tag"><i class="icon-cab"></i> Car parking</div>
+                                    <div class="info-tag"><i class="icon-suitcase"></i> Changing rooms</div>
+                                    <div class="info-tag"><i class="icon-megaphone"></i> Public announcement systems</div>
+                                    <div class="info-tag"><i class="icon-heartbeat"></i> Fitness trainer</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                 </td>
                             </tr>
                         </table>
@@ -97,8 +109,8 @@
             </div>
             <div class="details">
                 <div class="timings">
-                  <svg id="timingsWidget"></svg>
-                  <div class="legend"></div>
+                    <div class="legend"></div>
+                    <svg id="timingsWidget"></svg>
                 </div>
             </div>
           </div>

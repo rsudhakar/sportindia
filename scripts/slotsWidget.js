@@ -19,7 +19,7 @@ var TimingsWidget = function(svgSelector) {
       daysAxisWidth: 100
     };
     var days = _.collect(slotsData, function(d) { return d.day; });
-    constants.totalHeight = constants.timeAxisHeight + (days.length * 50);
+    constants.totalHeight = constants.timeAxisHeight + (days.length * 40);
     $(svgSelector).height(constants.totalHeight);
 
     drawTime();
@@ -52,7 +52,6 @@ var TimingsWidget = function(svgSelector) {
   var drawDays = function() {
     var slotsDays = _.collect(slotsData, function(d) { return d.day; })
     var availableDays = _.intersection(days, slotsDays);
-    var neededHeight = 120 + (availableDays.length * 60);
     daysAxis = new function() {
       var axis = d3.scale.linear().domain([0, availableDays.length-1]).range([constants.timeAxisHeight, constants.totalHeight - 30]);
       return function(value) {
@@ -76,17 +75,18 @@ var TimingsWidget = function(svgSelector) {
 
   var drawSlots = function() {
     var slotNames = _.uniq(_.collect(slotsData, function(d) { return d.type; }));
-    var slotNameElems = svg.selectAll(".slot").data(slotsData);
+    var slotNameElems = svg.selectAll(".slotName").data(slotsData);
     slotNameElems.enter().append("rect").classed("slotName", true);
     slotNameElems.exit().remove();
 
     slotNameElems.attr("x", function(d) { return timeAxis(d.from) })
         .attr("y", function(d) { return daysAxis(d.day.toLowerCase()) - 10 })
         .attr("width", function(d) { return timeAxis(d.to) - timeAxis(d.from) })
-        .attr("height", 10)
+        .attr("height", 15)
         .attr("rx", 5)
         .attr("ry", 5)
-        .attr("fill", function(d) { return colors(slotNames.indexOf(d.type)) });
+        .attr("fill", function(d) { return colors(slotNames.indexOf(d.type)) })
+        .attr("opacity", 1);
   }
 
   var drawLegend = function() {
@@ -97,9 +97,18 @@ var TimingsWidget = function(svgSelector) {
       legendItems
         .style("color", function(d) { return colors(slotNames.indexOf(d)) })
         .text(function(d) { return d });
-  }
+
+      legendItems.on("click", function(type) {
+          svg.selectAll(".slotName")
+              .transition()
+              .duration(500)
+              .attr("opacity", function(d) {
+              return (d.type === type) ? 1 : 0.1;
+          });
+      });
+  };
 
   return {
     render: render
   }
-}
+};

@@ -5,14 +5,14 @@ function initEventMap() {
 
 function initTimings() {
   var data = [
-      {type: "junior training session - batch 1", from: 7, to: 9, day: "sunday"},
-      {type: "junior training session - batch 1", from: 21, to: 22, day: "sunday"},
-      {type: "junior training session - batch 1", from: 7, to: 9, day: "tuesday"},
-      {type: "junior training session - batch 1", from: 21, to: 22, day: "tuesday"},
-      {type: "junior training session - batch 2", from: 7, to: 9, day: "thursday"},
-      {type: "junior training session - batch 2", from: 7, to: 9, day: "monday"},
-      {type: "special classes - batch 1", from: 10, to: 12, day: "saturday"},
-      {type: "special classes - batch 2", from: 14, to: 16, day: "saturday"}
+      {type: "Junior training session - batch 1", from: 7, to: 9, day: "sunday"},
+      {type: "Junior training session - batch 1", from: 21, to: 22, day: "sunday"},
+      {type: "Junior training session - batch 1", from: 7, to: 9, day: "tuesday"},
+      {type: "Junior training session - batch 1", from: 21, to: 22, day: "tuesday"},
+      {type: "Junior training session - batch 2", from: 7, to: 9, day: "thursday"},
+      {type: "Junior training session - batch 2", from: 7, to: 9, day: "monday"},
+      {type: "Special classes - batch 1", from: 10, to: 12, day: "saturday"},
+      {type: "Special classes - batch 2", from: 14, to: 16, day: "saturday"}
     ];
   var timingsWidget = new TimingsWidget("#timingsWidget");
   timingsWidget.render(data);

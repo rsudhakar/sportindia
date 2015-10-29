@@ -105,13 +105,19 @@ a {
     background-size: 100%; }
   .playground-header .header {
     width: 50%; }
-  .playground-header #location-map {
-    width: 400px;
-    height: 400px;
+  .playground-header .location-container {
     float: right;
     margin: 50px 20px -15px 0;
-    box-sizing: border-box;
-    border: 1px solid #00aaff; }
+    box-sizing: border-box; }
+    .playground-header .location-container #location-map {
+      width: 400px;
+      height: 400px;
+      border: 1px solid #00aaff; }
+    .playground-header .location-container .address {
+      font-size: 14px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ffd21f; }
 
 .event-header {
   position: relative; }
@@ -159,8 +165,28 @@ a {
     width: 100%;
     height: 300px; }
 
-.playground-name {
-  font-weight: bold; }
+.playground-name .name {
+  font-weight: bold;
+  font-size: 34px;
+  display: inline-block; }
+  .playground-name .name .details {
+    font-weight: normal; }
+    .playground-name .name .details .name {
+      font-size: 16px;
+      display: inline-block; }
+    .playground-name .name .details .contact {
+      display: inline-block;
+      line-height: 24px; }
+      .playground-name .name .details .contact > div {
+        display: inline-block; }
+      .playground-name .name .details .contact:before {
+        font-family: "fontello";
+        content: '( \e80b';
+        font-size: 24px;
+        padding: 0 5px; }
+      .playground-name .name .details .contact:after {
+        content: ")";
+        font-size: 24px; }
 
 .playground-info {
   padding-bottom: 30px; }
@@ -246,16 +272,15 @@ a {
 
 .court-info td {
   padding: 5px; }
-.court-info .type {
+.court-info .segment {
   width: 100px; }
-
-.info-tag {
+.court-info i {
+  color: #00aaff; }
+.court-info .info-tag {
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   margin-right: 10px;
-  margin-top: 10px;
-  border: 1px solid #ffffff;
-  min-width: 100px; }
+  margin-top: 10px; }
 
 .photos a img {
   height: 100px; }
@@ -301,8 +326,13 @@ a {
     stroke: #bfbfbf; }
 
 .legend {
-  text-align: center; }
+  text-align: left; }
   .legend .item {
     display: inline-block;
-    font-size: 13px;
-    padding: 5px 10px; }
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #bfbfbf;
+    border-radius: 10px;
+    margin: 4px;
+    width: 30%; }
