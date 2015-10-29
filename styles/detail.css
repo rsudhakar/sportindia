@@ -165,28 +165,44 @@ a {
     width: 100%;
     height: 300px; }
 
-.playground-name .name {
-  font-weight: bold;
-  font-size: 34px;
-  display: inline-block; }
-  .playground-name .name .details {
-    font-weight: normal; }
-    .playground-name .name .details .name {
-      font-size: 16px;
-      display: inline-block; }
-    .playground-name .name .details .contact {
-      display: inline-block;
-      line-height: 24px; }
-      .playground-name .name .details .contact > div {
+.playground-name {
+  position: relative; }
+  .playground-name .name {
+    font-weight: bold;
+    font-size: 34px;
+    display: inline-block;
+    max-width: 70%; }
+    .playground-name .name .details {
+      font-weight: normal; }
+      .playground-name .name .details .name {
+        font-size: 16px;
         display: inline-block; }
-      .playground-name .name .details .contact:before {
-        font-family: "fontello";
-        content: '( \e80b';
-        font-size: 24px;
-        padding: 0 5px; }
-      .playground-name .name .details .contact:after {
-        content: ")";
-        font-size: 24px; }
+      .playground-name .name .details .contact {
+        display: inline-block;
+        line-height: 24px; }
+        .playground-name .name .details .contact > div {
+          display: inline-block; }
+        .playground-name .name .details .contact:before {
+          font-family: "fontello";
+          content: '( \e80b';
+          font-size: 24px;
+          padding: 0 5px; }
+        .playground-name .name .details .contact:after {
+          content: ")";
+          font-size: 24px; }
+  .playground-name .rating {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px; }
+    .playground-name .rating i {
+      padding-left: 15px; }
+      .playground-name .rating i.positive {
+        color: #228022; }
+      .playground-name .rating i.negative {
+        color: darkred; }
 
 .playground-info {
   padding-bottom: 30px; }
@@ -289,7 +305,7 @@ a {
   position: relative;
   padding: 20px 0; }
   .review .date {
-    width: 50px;
+    width: 65px;
     height: 100%;
     position: absolute;
     border-right: 1px solid #00aaff;
@@ -302,14 +318,22 @@ a {
       text-align: center;
       padding: 2px 4px; }
       .review .date > div:after {
-        content: "\2022";
-        font-size: 32px;
+        font-family: 'fontello';
+        font-size: 8px;
         position: absolute;
-        right: -7px;
-        top: -13px;
-        color: #00aaff; }
+        right: -9px;
+        top: 10px;
+        color: #ffffff;
+        padding: 4px;
+        border-radius: 10px; }
+    .review .date > div.positive:after {
+      content: "\e867";
+      background-color: #228022; }
+    .review .date > div.negative:after {
+      content: "\e868";
+      background-color: darkred; }
   .review .message, .review .reviewer {
-    padding-left: 70px;
+    padding-left: 85px;
     font-style: italic;
     font-size: 14px; }
   .review .reviewer {

@@ -123,11 +123,13 @@
 }
 
 .playground-name {
+  position: relative;
 
   .name {
     font-weight: bold;
     font-size: 34px;
     display: inline-block;
+    max-width: 70%;
 
     .details {
       font-weight: normal;
@@ -157,6 +159,27 @@
       }
     }
   }
+
+  .rating {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+
+    i {
+      padding-left: 15px;
+
+      &.positive {
+        color: $color-positive;
+      }
+      &.negative {
+        color: $color-negative;
+      }
+    }
+  }
+
 }
 
 .playground-info {
@@ -313,7 +336,7 @@
   padding: 20px 0;
 
   .date {
-    width: 50px;
+    width: 65px;
     height: 100%;
     position: absolute;
     border-right: 1px solid $color-logo-blue;
@@ -328,18 +351,34 @@
       padding: 2px 4px;
 
       &:after {
-        content: "\2022";
-        font-size: 32px;
+        font-family: 'fontello';
+        font-size: 8px;
         position: absolute;
-        right: -7px;
-        top: -13px;
-        color: $color-logo-blue;
+        right: -9px;
+        top: 10px;
+        color: #ffffff;
+        padding: 4px;
+        border-radius: 10px;
+      }
+    }
+
+    > div.positive {
+      &:after {
+        content: "\e867";
+        background-color: $color-positive;
+      }
+    }
+
+    > div.negative {
+      &:after {
+        content: "\e868";
+        background-color: $color-negative;
       }
     }
   }
 
   .message, .reviewer {
-    padding-left: 70px;
+    padding-left: 85px;
     font-style: italic;
     font-size: 14px;
   }
