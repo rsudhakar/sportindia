@@ -16,7 +16,7 @@ var TimingsWidget = function(svgSelector) {
     constants = {
       totalWidth: $(svgSelector).width(),
       timeAxisHeight: 100,
-      daysAxisWidth: 100
+      daysAxisWidth: 110
     };
     var days = _.collect(slotsData, function(d) { return d.day; });
     constants.totalHeight = constants.timeAxisHeight + (days.length * 40);
@@ -39,7 +39,7 @@ var TimingsWidget = function(svgSelector) {
     timeElems.enter().append("text").classed("time", true);
     timeElems.attr("x", function(d) { return timeAxis(d) - 10 })
         .attr("y", 50)
-        .text(function(d) { return (d < 12) ? d + " am" : (d == 12 ? "12 pm" : (d-12) + " pm") });
+        .text(function(d) { return (d < 12) ? d + "am" : (d == 12 ? "12pm" : (d-12) + "pm") });
 
     timeTickElems = svg.selectAll(".timeTick").data(timeSlots);
     timeTickElems.enter().append("line").classed("timeTick", true);
@@ -61,16 +61,16 @@ var TimingsWidget = function(svgSelector) {
 
     var daysElem = svg.selectAll(".day").data(availableDays);
     daysElem.enter().append("text").classed("day", true);
-    daysElem.attr("x", 10)
+    daysElem.attr("x", 20)
         .attr("y", function(d) { return daysAxis(d) })
         .text(function(d) { return d[0].toUpperCase() + d.slice(1) });
 
     var dayLineElems = svg.selectAll(".dayLines").data(_.slice(availableDays, 0, availableDays.length-1));
     dayLineElems.enter().append("line").classed("dayLines", true);
-    dayLineElems.attr("x1", 0)
-        .attr("y1", function(d) { return daysAxis(d) + 30 })
+    dayLineElems.attr("x1", constants.daysAxisWidth)
+        .attr("y1", function(d) { return daysAxis(d) - 2 })
         .attr("x2", width)
-        .attr("y2", function(d) { return daysAxis(d) + 30 });
+        .attr("y2", function(d) { return daysAxis(d) - 2 });
   }
 
   var drawSlots = function() {
@@ -99,12 +99,15 @@ var TimingsWidget = function(svgSelector) {
         .text(function(d) { return d });
 
       legendItems.on("click", function(type) {
+          d3.selectAll(".item").classed("selected", false);
+          d3.select(this).classed("selected", true);
           svg.selectAll(".slotName")
               .transition()
               .duration(500)
               .attr("opacity", function(d) {
               return (d.type === type) ? 1 : 0.1;
           });
+          $(".more-info").show();    
       });
   };
 

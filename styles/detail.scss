@@ -42,6 +42,10 @@
 
 .section {
   border-bottom: none;
+
+  &:nth-child(odd) {
+    background-color: #ffffff;
+  }
 }
 
 .tennis-icon {
@@ -392,28 +396,67 @@
   }
 }
 
-#timingsWidget {
-  width: 800px;
-  height: 500px;
-  font-size: 14px;
-
-  .dayLines, .timeTick {
-    stroke-width: 1px;
-    stroke: $color-darkgray;
-  }
-}
-
 .legend {
+  width: 250px;
+  padding-top: 80px;
+  float: left;
   text-align: left;
   .item {
     display: inline-block;
+    box-sizing: border-box;
     cursor: pointer;
     font-size: 16px;
-    padding: 5px 10px;
-    border: 1px solid $color-darkgray;
-    border-radius: 10px;
-    margin: 4px;
-    width: 30%;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid $color-gray;
+    
+    &:nth-child(1) {
+      border-top: 1px solid $color-gray;
+    }
 
+    &.selected {
+      background-color: $color-gray;
+    }
   }
 }
+
+.legend-details {
+  border-left: 5px solid $color-gray;
+  box-sizing: border-box;
+  width: 650px;
+  float: right;
+
+  .more-info {
+    margin: 0 30px;
+    float: right;
+
+    span {
+      margin: 0 20px;
+    }
+  }
+
+  #timingsWidget {
+    width: 100%;
+    height: 500px;
+    font-size: 14px;
+    box-sizing: border-box;
+
+    .time {
+      font-size: 11px;
+    }
+
+    .timeTick {
+      stroke-width: 2px;
+      stroke: $color-logo-blue;
+    }
+
+    .dayLines, {
+      stroke-width: 0.5px;
+      shape-rendering: crispEdges;
+      stroke: $color-logo-yellow;
+    }
+  }
+  
+}
+
+
