@@ -17,6 +17,10 @@
     //filter: blur(1px);
   }
 
+  .header {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
   .content {
     position: relative;
   }
@@ -36,6 +40,27 @@
     .details {
       font-size: 16px;
       padding-top: 15px;
+    }
+  }
+}
+
+.entity-name {
+  color: white;
+  padding-left: 5px;
+  display:none;
+}
+
+.entity-links {
+  color: #FFF;
+  font-size: 13px;
+  display: none;
+  border-top: 1px solid black;
+
+  >span {
+    float: right;
+    >span {
+      display: inline-block;
+      padding: 5px;
     }
   }
 }
@@ -65,7 +90,6 @@
       padding-top: 5px;
     }
   }
-
 }
 
 .tennis-icon {
@@ -78,6 +102,7 @@
 
 .playground-header {
   @include header-bg();
+  display: block;
   height: 400px;
   padding: 0;
   &:before {
@@ -85,14 +110,25 @@
     background-size: 100%;
   }
 
+  .wrapper {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 100%;
+  }
+
   .header {
     width: 50%;
   }
 
+  .content {
+    height: 100%;
+  }
+
   .options {
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
+    position: relative;
+    float: right;
+    margin: 82px 40px;
     width: 42px;
 
     i {
@@ -102,6 +138,81 @@
       line-height: 46px;
     }
   }
+
+  .playground-name {
+    border-bottom: none;
+    margin-bottom: 0;
+
+    .name {
+      font-weight: bold;
+      font-size: 34px;
+      display: inline-block;
+      max-width: 70%;
+
+      .details {
+        font-weight: normal;
+        .name {
+          font-size: 16px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .rating {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 26px 10px;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+
+      span {      
+        display: inline-block;
+        padding: 0 5px;
+
+        i {
+          padding: 5px;
+          border-radius: 15px;
+
+          &.positive {
+            color: $color-positive;
+            border: 2px solid $color-positive;
+          }
+          &.negative {
+            color: $color-negative;
+            border: 2px solid $color-negative;
+          }
+        }
+
+        div {
+          display: block;
+          text-align: center;
+          padding-top: 7px;
+          font-size: 14px;
+        }
+      }  
+    }
+  }
+}
+
+.section.playground-links {
+  border-top: 1px solid $color-darkgray;
+
+  .links {
+    text-align: right;    
+    font-weight: bold;
+
+    span {
+      padding: 0 5px;
+    }
+  }
+}
+
+
+.section.playground-details {
+  background-image: url("../images/patterns/crossword.png");
+  padding-top: 50px;
 }
 
 .event-header {
@@ -138,83 +249,6 @@
     width: 100%;
     height: 300px;
   }
-
-}
-
-.playground-name {
-  position: relative;
-
-  .name {
-    font-weight: bold;
-    font-size: 34px;
-    display: inline-block;
-    max-width: 70%;
-
-    .details {
-      font-weight: normal;
-      .name {
-        font-size: 16px;
-        display: inline-block;
-      }
-      /* TODO: Not needed */
-      .contact {
-        display: inline-block;
-        line-height: 24px;
-
-        & > div {
-          display: inline-block;
-        }
-
-        &:before {
-          font-family: "fontello";
-          content: '( \e80b';
-          font-size: 24px;
-          padding: 0 5px;
-        }
-
-        &:after {
-          content: ")";
-          font-size: 24px;
-        }
-      }
-    }
-  }
-
-  .rating {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 15px 10px;
-    display: inline-block;
-    font-size: 12px;
-
-    span {      
-      display: inline-block;
-      padding: 0 5px;
-
-      i {
-        padding: 5px;
-        border-radius: 15px;
-
-        &.positive {
-          color: $color-positive;
-          border: 1px solid $color-positive;
-        }
-        &.negative {
-          color: $color-negative;
-          border: 1px solid $color-negative;
-        }
-      }
-
-      div {
-        display: block;
-        text-align: center;
-        padding-top: 7px;
-        font-size: 14px;
-      }
-    }  
-  }
-
 }
 
 .playground-info {
@@ -350,7 +384,17 @@
   }
 }
 
-.location-section {
+.section.playground-timings {
+  background-image: url("../images/patterns/crossword.png");
+}
+
+.section.location-section {
+  background-image: url("../images/patterns/grey_wash_wall.png");
+
+  .heading {
+    color: white;
+    border-bottom-color: $color-logo-yellow;
+  }
 
   #location-map {
     display: inline-block;
@@ -365,24 +409,35 @@
     width: 30%;
     height: 400px;
     float: right;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
 
     input[type="button"] {
       padding: 5px;
       margin: 5px;
+      color: black;
       background-color: $color-logo-yellow;
     }
   }
 }
 
-.photos {
-  a img {
-    height: 100px;
+.section.playground-photos {
+  background-image: url("../images/patterns/debut_light.png");
+  .photos {
+    a img {
+      height: 100px;
+    }
   }
+  
+}
+
+
+.section.playground-reviews {
+  background-image: url("../images/patterns/debut_light.png");
 }
 
 .review {
@@ -394,8 +449,6 @@
     height: 100%;
     position: absolute;
     border-right: 1px solid $color-logo-blue;
-    border-top: 1px solid $color-gray;
-    background-color: rgba(255, 255, 255, 0.5);
 
     > div {
       font-size: 12px;
@@ -406,7 +459,8 @@
 
       &:after {
         font-family: 'fontello';
-        font-size: 8px;
+        font-size: 9px;
+        line-height: 9px;
         position: absolute;
         right: -9px;
         top: 10px;
@@ -498,13 +552,17 @@
 
     .timeTick {
       stroke-width: 2px;
-      stroke: $color-logo-blue;
+      stroke: $color-logo-yellow;
     }
 
     .dayLines, {
-      stroke-width: 0.5px;
+      stroke-width: 1px;
       shape-rendering: crispEdges;
-      stroke: $color-logo-yellow;
+      stroke: #24E917;
+    }
+
+    .slotName {
+      fill: #24E917;
     }
   }
   

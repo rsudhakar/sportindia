@@ -5,8 +5,12 @@
   font-family: "improved";
   src: url("../fonts/Quicksand-Regular.otf"); }
 body {
-  background-color: #efefef;
+  background-color: #EFEFEF;
   font-family: chosen; }
+
+input[type="button"] {
+  border: 1px solid #bfbfbf;
+  border-radius: 4px; }
 
 .site-label {
   position: relative;
@@ -45,7 +49,7 @@ a {
         display: inline-block;
         padding: 10px; }
       .header .content .games > div.selected {
-        background-color: #efefef;
+        background-color: #EFEFEF;
         font-weight: bold;
         color: #000000; }
     .header .content .login {
@@ -57,7 +61,7 @@ a {
   position: relative; }
 
 .section {
-  background-color: #efefef;
+  background-color: #EFEFEF;
   border-bottom: 2px solid #bfbfbf;
   padding: 30px 0; }
   .section .content {
@@ -141,7 +145,7 @@ a {
   margin: 0 auto;
   padding-top: 50px; }
   #homepage-map #homepage-map-input {
-    border: 1px solid #efefef; }
+    border: 1px solid #EFEFEF; }
 
 .event-timeline {
   width: 100%;
@@ -218,3 +222,5 @@ a {
         line-height: 18px;
         letter-spacing: 0;
         color: #696868; }
+
+/*# sourceMappingURL=index.css.map */

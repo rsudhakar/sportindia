@@ -21,6 +21,11 @@ body {
   font-family: chosen;
 }
 
+input[type="button"] {
+   border: 1px solid $color-darkgray;
+   border-radius: 4px;
+}
+
 .site-label {
   position: relative;
   display: inline-block;

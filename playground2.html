@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="styles/normalize.css"/>
     <link rel="stylesheet" href="styles/lightbox.css"/>
-    <link rel="stylesheet" href="styles/detail.css"/>
+    <link rel="stylesheet" href="styles/detail2.css"/>
     <link rel="stylesheet" href="fontello/css/fontello.css"/>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -15,10 +15,11 @@
     <script src="scripts/lib/jquery.min.js"></script>
     <script src="scripts/lib/lodash.min.js"></script>
     <script src="scripts/lib/d3.min.js"></script>
+    <script src="scripts/lib/skrollr.min.js"></script>
 
     <script src="scripts/locationMap.js"></script>
-    <script src="scripts/slotsWidget.js"></script>
-    <script src="scripts/playground.js"></script>
+    <script src="scripts/slotsWidget2.js"></script>
+    <script src="scripts/playground2.js"></script>
 
 </head>
 <body>
@@ -30,11 +31,24 @@
                 <span>sport</span>India
             </div>
         </div>
+        <span class="entity-name" data-0="display:!none" data-top-bottom="display:!inline-block" data-anchor-target="#entity-heading">
+            Army Officers Training Centre
+        </span>
+        <div class="entity-links" data-0="display:!none" data-top-bottom="display:!block" data-anchor-target="#entity-heading-links">
+            <span>
+                <span>About</span>
+                <span>Timings</span>
+                <span>Location</span>
+                <span>Members</span>
+                <span>Photos</span>
+                <span>Reviews</span>
+            </span>
+        </div>
+
     </div>
 </div>
 
 <div class="container">
-
     <div class="section playground-header">
         <div class="options">
             <div>
@@ -44,14 +58,11 @@
                 <i class="icon-hourglass"></i>
             </div>
         </div>
-    </div>
-
-    <div class="section">
-        <div class="content">
-            
+        <div class="wrapper">
+            <div class="content">
                 <div class="heading playground-name">
                     <div class="tennis-icon"></div>
-                    <div class="name">
+                    <div id="entity-heading" class="name">
                         Army Officers Training Centre
                         <div class="details">
                             Alandur, Chennai
@@ -68,7 +79,24 @@
                         </span>
                     </div>
                 </div>
+            </div>    
+        </div>
+    </div>
+    <div id="entity-heading-links" class="section playground-links">
+        <div class="content">
+            <div class="links">
+                <span>About</span>
+                <span>Timings</span>
+                <span>Location</span>
+                <span>Members</span>
+                <span>Photos</span>
+                <span>Reviews</span>
+            </div>
+        </div>
+    </div>
 
+    <div class="section playground-details">
+        <div class="content">            
                 <div class="details">
                     <div class="playground-info">
                        Established in the year 2004 in T.Nagar.
@@ -108,7 +136,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section playground-timings">
         <div class="content">
           
             <div class="heading">
@@ -147,7 +175,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section playground-photos">
         <div class="content">
             
                 <div class="heading">
@@ -174,7 +202,7 @@
         </div>
     </div>
 
-    <div class="section" id="ratings">
+    <div class="section playground-reviews" id="ratings">
         <div class="content">
             
                 <div class="heading">
