@@ -15,16 +15,16 @@ var TimingsWidget = function(svgSelector) {
     slotsData = data;
     constants = {
       totalWidth: $(svgSelector).width(),
-      timeAxisHeight: 100,
+      timeAxisHeight: 50,
       daysAxisWidth: 110
     };
     var days = _.collect(slotsData, function(d) { return d.day; });
 
-    var defaultType = data[0].type;
+    // var defaultType = data[0].type;
     drawLegend();
-    drawTime(defaultType);
-    drawDays(defaultType);
-    drawSlots(defaultType);
+    // drawTime(defaultType);
+    // drawDays(defaultType);
+    // drawSlots(defaultType);
   }
 
   var drawTime = function(type) {
@@ -39,16 +39,16 @@ var TimingsWidget = function(svgSelector) {
     timeElems.exit().remove();
     timeElems.enter().append("text").classed("time", true);
     timeElems.attr("x", function(d) { return timeAxis(d) - 10 })
-        .attr("y", 50)
+        .attr("y", 10)
         .text(function(d) { return (d < 12) ? d + "am" : (d == 12 ? "12pm" : (d-12) + "pm") });
 
     timeTickElems = svg.selectAll(".timeTick").data(timeSlots);
     timeTickElems.exit().remove();
     timeTickElems.enter().append("line").classed("timeTick", true);
     timeTickElems.attr("x1", function(d) { return timeAxis(d)})
-        .attr("y1", 60)
+        .attr("y1", 15)
         .attr("x2", function(d) { return timeAxis(d)})
-        .attr("y2", 70);
+        .attr("y2", 25);
   }
 
   var drawDays = function(type) {
@@ -56,7 +56,7 @@ var TimingsWidget = function(svgSelector) {
     var slotsDays = _.collect(filteredSlotsData, function(d) { return d.day; })
     var availableDays = _.intersection(days, slotsDays);
 
-    var neededHeight = constants.timeAxisHeight + availableDays.length*30;
+    var neededHeight = constants.timeAxisHeight + availableDays.length * 20;
     $(svgSelector).height(neededHeight + 30);
 
     daysAxis = new function() {
@@ -101,32 +101,37 @@ var TimingsWidget = function(svgSelector) {
   }
 
   var drawLegend = function() {
-      var slotNames = _.uniq(_.collect(slotsData, function(d) { return d.type; }));
+      var slotNames = _.uniq(_.collect(slotsData, function(d) { return {type: d.type, category: d.category} }));
+      var uniqueSlotNames = _.uniq(slotNames, function(d) { return d.type });
       var legend = d3.select(".legend");
-      var legendItems = legend.selectAll(".item").data(slotNames);
-      legendItems.enter().append("div").classed("item", true);
-      legendItems
-        // .style("color", function(d) { return colors(slotNames.indexOf(d)) })
-        .text(function(d) { return d });
+      var legendItems = legend.selectAll(".item").data(uniqueSlotNames);
+      var newLegendItems = legendItems.enter().append("div").classed("item", true);
 
-      legendItems.on("click", function(type) {
+      newLegendItems.append("div").classed("name", true);
+      newLegendItems.append("div").classed("category", true);
+
+      legendItems.select(".name").text(function(d) { return d.type });
+      legendItems.select(".category").text(function(d) { return  d.category });
+
+      legendItems.on("click", function(item) {
+          var type = item.type;
           d3.selectAll(".item").classed("selected", false);
           d3.select(this).classed("selected", true);
           drawTime(type);
           drawDays(type);
           drawSlots(type);
-          $(".more-info").show();    
-
-          // svg.selectAll(".slotName")
-          //     .transition()
-          //     .duration(500)
-          //     .attr("opacity", function(d) {
-          //     return (d.type === type) ? 1 : 0.1;
-          // });          
+          $(".more-info").show();
       });
   };
 
+  var show = function(type) {
+      var element = d3.selectAll(".item")
+        .filter(function(d) { return d.type === type});
+      $(element[0][0]).trigger("click");
+  }
+
   return {
-    render: render
+    render: render,
+    show: show
   }
 };

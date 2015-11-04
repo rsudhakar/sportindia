@@ -1,5 +1,10 @@
 @import 'common';
 
+
+.header {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
 @mixin header-bg {
   position: relative;
   &:before {
@@ -15,10 +20,6 @@
     //-o-filter: blur(1px);
     //-ms-filter: blur(1px);
     //filter: blur(1px);
-  }
-
-  .header {
-    background-color: rgba(0, 0, 0, 0.75);
   }
 
   .content {
@@ -44,6 +45,14 @@
   }
 }
 
+input[type="button"] {
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  background-color: $color-logo-yellow;
+}
+
+
 .entity-name {
   color: white;
   padding-left: 5px;
@@ -66,7 +75,7 @@
 }
 
 .section {
-  padding: 10px 0;
+  padding: 30px 0;
   border-bottom: none;
   display: inline-block;
   width: 100%;
@@ -113,7 +122,7 @@
   .wrapper {
     position: absolute;
     bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
   }
 
@@ -198,6 +207,7 @@
 
 .section.playground-links {
   border-top: 1px solid $color-darkgray;
+  padding: 10px 0;
 
   .links {
     text-align: right;    
@@ -415,13 +425,6 @@
     align-items: center;
     text-align: center;
     color: white;
-
-    input[type="button"] {
-      padding: 5px;
-      margin: 5px;
-      color: black;
-      background-color: $color-logo-yellow;
-    }
   }
 }
 
@@ -501,15 +504,18 @@
 }
 
 .legend {
-  width: 250px;
-  padding-top: 20px;
+  width: 300px;
+  padding: 20px 0;
   float: left;
   text-align: left;
+  border-right: 5px solid $color-gray;
+  box-sizing: border-box;
+
   .item {
     display: inline-block;
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px;
     width: 100%;
     border-bottom: 1px solid $color-gray;
@@ -521,22 +527,41 @@
     &.selected {
       background-color: $color-gray;
     }
+
+    .category {
+      font-size: 12px;
+      color: $color-logo-blue;
+
+      &:before {
+        font-family: "fontello";
+        content: '\e827';
+        padding: 0 5px 0 0;
+      }
+    }
   }
 }
 
 .legend-details {
-  border-left: 5px solid $color-gray;
   box-sizing: border-box;
-  width: 650px;
+  width: 600px;
   float: right;
 
   .more-info {
-    padding: 10px;
-    float: right;
-    border-bottom: 1px solid $color-darkgray;
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
 
     span {
-      margin: 0 20px;
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 0 0 30px 20px;
+      padding: 7px;
+      width: 70%;
+    }
+
+    input[type="button"] {
+      float: right;
+      margin: 0;
     }
   }
 
@@ -545,6 +570,7 @@
     height: 500px;
     font-size: 14px;
     box-sizing: border-box;
+    padding-top: 10px;
 
     .time {
       font-size: 11px;

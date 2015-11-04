@@ -5,18 +5,17 @@ function initEventMap() {
 
 function initTimings() {
   var data = [
-      {type: "Junior training session - First batch", from: 7, to: 9, day: "sunday"},
-      {type: "Junior training session - First batch", from: 7, to: 9, day: "monday"},
-      {type: "Junior training session - First batch", from: 21, to: 22, day: "sunday"},
-      {type: "Junior training session - First batch", from: 7, to: 9, day: "tuesday"},
-      {type: "Junior training session - First batch", from: 21, to: 22, day: "tuesday"},
-      {type: "Junior training session - Second batch", from: 7, to: 9, day: "thursday"},
-      {type: "Junior training session - Second batch", from: 7, to: 9, day: "monday"},
-      {type: "Special classes - batch 1", from: 10, to: 12, day: "saturday"},
-      {type: "Special classes - batch 2", from: 14, to: 16, day: "saturday"}
+      {type: "Junior training session - First batch", from: 7, to: 9, day: "sunday", category: "Below 15 years"},
+      {type: "Junior training session - First batch", from: 7, to: 9, day: "monday", category: "Below 15 years"},
+      {type: "Junior training session - First batch", from: 21, to: 22, day: "tuesday", category: "Below 15 years"},
+      {type: "Junior training session - Second batch", from: 7, to: 9, day: "thursday", category: "Below 10 years"},
+      {type: "Junior training session - Second batch", from: 7, to: 9, day: "monday", category: "Below 10 years"},
+      {type: "Special classes - batch 1", from: 10, to: 12, day: "saturday", category: "Below 15 years"},
+      {type: "Special classes - batch 2", from: 14, to: 16, day: "saturday", category: "Above 15 years"}
     ];
   var timingsWidget = new TimingsWidget("#timingsWidget");
   timingsWidget.render(data);
+  timingsWidget.show("Special classes - batch 1");
 }
 
 function initGallery() {
