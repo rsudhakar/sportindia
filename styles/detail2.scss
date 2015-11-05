@@ -45,6 +45,17 @@
   }
 }
 
+@mixin dark-bg {
+  background-image: url("../images/patterns/grey_wash_wall.png");
+  color: white;
+
+  .heading {
+    color: white;
+    border-bottom-color: $color-logo-yellow;
+  }
+
+}
+
 input[type="button"] {
   padding: 5px;
   margin: 5px;
@@ -210,8 +221,7 @@ input[type="button"] {
   padding: 10px 0;
 
   .links {
-    text-align: right;    
-    font-weight: bold;
+    text-align: right;
 
     span {
       padding: 0 5px;
@@ -223,6 +233,7 @@ input[type="button"] {
 .section.playground-details {
   background-image: url("../images/patterns/crossword.png");
   padding-top: 50px;
+  font-size: 14px;
 }
 
 .event-header {
@@ -399,12 +410,7 @@ input[type="button"] {
 }
 
 .section.location-section {
-  background-image: url("../images/patterns/grey_wash_wall.png");
-
-  .heading {
-    color: white;
-    border-bottom-color: $color-logo-yellow;
-  }
+  @include dark-bg();
 
   #location-map {
     display: inline-block;
@@ -424,12 +430,12 @@ input[type="button"] {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
   }
 }
 
 .section.playground-photos {
-  background-image: url("../images/patterns/debut_light.png");
+  @include dark-bg();
+
   .photos {
     a img {
       height: 100px;

@@ -211,14 +211,14 @@ input[type="button"] {
   border-top: 1px solid #bfbfbf;
   padding: 10px 0; }
   .section.playground-links .links {
-    text-align: right;
-    font-weight: bold; }
+    text-align: right; }
     .section.playground-links .links span {
       padding: 0 5px; }
 
 .section.playground-details {
   background-image: url("../images/patterns/crossword.png");
-  padding-top: 50px; }
+  padding-top: 50px;
+  font-size: 14px; }
 
 .event-header {
   position: relative; }
@@ -357,7 +357,8 @@ input[type="button"] {
   background-image: url("../images/patterns/crossword.png"); }
 
 .section.location-section {
-  background-image: url("../images/patterns/grey_wash_wall.png"); }
+  background-image: url("../images/patterns/grey_wash_wall.png");
+  color: white; }
   .section.location-section .heading {
     color: white;
     border-bottom-color: #ffd21f; }
@@ -376,11 +377,14 @@ input[type="button"] {
     padding: 10px;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white; }
+    text-align: center; }
 
 .section.playground-photos {
-  background-image: url("../images/patterns/debut_light.png"); }
+  background-image: url("../images/patterns/grey_wash_wall.png");
+  color: white; }
+  .section.playground-photos .heading {
+    color: white;
+    border-bottom-color: #ffd21f; }
   .section.playground-photos .photos a img {
     height: 100px; }
 
