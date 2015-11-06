@@ -20,11 +20,7 @@ var TimingsWidget = function(svgSelector) {
     };
     var days = _.collect(slotsData, function(d) { return d.day; });
 
-    // var defaultType = data[0].type;
     drawLegend();
-    // drawTime(defaultType);
-    // drawDays(defaultType);
-    // drawSlots(defaultType);
   }
 
   var drawTime = function(type) {
