@@ -32,27 +32,27 @@ li {
 a {
   text-decoration: none; }
 
-.header {
+.site-header {
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
-  .header .content {
+  .site-header .content {
     width: 900px;
     margin: 0 auto; }
-    .header .content .games {
+    .site-header .content .games {
       display: inline-block;
       color: #ffffff; }
-      .header .content .games > div {
+      .site-header .content .games > div {
         display: inline-block;
         padding: 10px; }
-      .header .content .games > div.selected {
+      .site-header .content .games > div.selected {
         background-color: #EFEFEF;
         font-weight: bold;
         color: #000000; }
-    .header .content .login {
+    .site-header .content .login {
       float: right;
       display: inline-block;
       padding: 10px; }

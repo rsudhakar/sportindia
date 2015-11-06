@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="fontello/css/fontello.css"/>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <script src="scripts/lib/jquery.min.js"></script>
     <script src="scripts/lib/lodash.min.js"></script>
     <script src="scripts/lib/d3.min.js"></script>
@@ -25,32 +24,33 @@
 
 <body id="skrollr-body">
 
-<div class="header">
-    <div class="content">
-        <div class="site-label">
-            <div class="sitename">
-                <span>sport</span>India
+    <div class="site-header">
+        <div class="content">
+            <div class="site-label">
+                <a href="/">
+                    <div class="sitename">
+                        <span>sport</span>India
+                    </div>
+                </a>
+            </div>
+            <span class="entity-name" data-0="display:!none" data-top-bottom="display:!inline-block" data-anchor-target="#entity-heading">
+                Army Officers Training Centre
+            </span>
+            <div class="entity-links" data-0="display:!none" data-top-bottom="display:!block" data-anchor-target="#entity-heading-links">
+                <span>
+                    <span class="selected">About</span>
+                    <span>Timings</span>
+                    <span>Location</span>
+                    <span>Members</span>
+                    <span>Photos</span>
+                    <span>Reviews</span>
+                </span>
             </div>
         </div>
-        <span class="entity-name" data-0="display:!none" data-top-bottom="display:!inline-block" data-anchor-target="#entity-heading">
-            Army Officers Training Centre
-        </span>
-        <div class="entity-links" data-0="display:!none" data-top-bottom="display:!block" data-anchor-target="#entity-heading-links">
-            <span>
-                <span>About</span>
-                <span>Timings</span>
-                <span>Location</span>
-                <span>Members</span>
-                <span>Photos</span>
-                <span>Reviews</span>
-            </span>
-        </div>
-
     </div>
-</div>
 
-<div class="container">
-    <div class="section playground-header">
+
+    <div class="section page-banner-section">
         <div class="options">
             <div>
                 <i class="icon-lodging"></i>
@@ -83,10 +83,12 @@
             </div>    
         </div>
     </div>
-    <div id="entity-heading-links" class="section playground-links">
+
+
+    <div id="entity-heading-links" class="section playground-links-section">
         <div class="content">
             <div class="links">
-                <span>About</span>
+                <span class="selected">About</span>
                 <span>Timings</span>
                 <span>Location</span>
                 <span>Members</span>
@@ -96,154 +98,147 @@
         </div>
     </div>
 
-    <div class="section playground-details">
+    <div class="section playground-details-section">
         <div class="content">            
-                <div class="details">
-                    <div class="playground-info">
-                       Established in the year 2004 in T.Nagar.
-                       Classes are taken in 2 skate grounds at the ratio of 10: 1 student and coach.
-                       Chennai sports academy also conduct tournaments
-                    </div>
-                    <div class="facility-details">
-                        <table class="court-info">
-                            <tr>
-                                <td class="title">
-                                    Type
-                                </td>
-                                <td class="big">
-                                    <div class="info-tag"><i class="icon-columns"></i> 3 Courts</div>
-                                    <div class="info-tag"><i class="icon-th"></i> Mat surface</div>
-                                    <div class="info-tag"><i class="icon-lightbulb"></i> Flood lights</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="title">
-                                    Facilities
-                                </td>
-                                <td>
-                                    <div class="info-tag"><i class="icon-cab"></i> Car parking</div>
-                                    <div class="info-tag"><i class="icon-suitcase"></i> Changing rooms</div>
-                                    <div class="info-tag"><i class="icon-megaphone"></i> Public announcement systems</div>
-                                    <div class="info-tag"><i class="icon-heartbeat"></i> Fitness trainer</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-        </div>
-    </div>
-
-    <div class="section playground-timings">
-        <div class="content">
-          
-            <div class="heading">
-              Timings
-            </div>
             <div class="details">
-                <div class="timings">
-                    <div class="legend"></div>
-                    <div class="legend-details">
-                        <div class="more-info">
-                            <span>Some description about this category and timings info</span>
-                            <input type="button" value="Become a Member"></input>
-                        </div>
-                        <svg id="timingsWidget"></svg>
-                    </div>
-                </div>
+                <div class="playground-info">
+                 Established in the year 2004 in T.Nagar.
+                 Classes are taken in 2 skate grounds at the ratio of 10: 1 student and coach.
+                 Chennai sports academy also conduct tournaments
+             </div>
+             <div class="facility-details">
+                <table class="court-info">
+                    <tr>
+                        <td class="title">
+                            Type
+                        </td>
+                        <td class="big">
+                            <div class="info-tag"><i class="icon-columns"></i> 3 Courts</div>
+                            <div class="info-tag"><i class="icon-th"></i> Mat surface</div>
+                            <div class="info-tag"><i class="icon-lightbulb"></i> Flood lights</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">
+                            Facilities
+                        </td>
+                        <td>
+                            <div class="info-tag"><i class="icon-cab"></i> Car parking</div>
+                            <div class="info-tag"><i class="icon-suitcase"></i> Changing rooms</div>
+                            <div class="info-tag"><i class="icon-megaphone"></i> Public announcement systems</div>
+                            <div class="info-tag"><i class="icon-heartbeat"></i> Fitness trainer</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
             </div>
-          
         </div>
     </div>
+</div>
 
-    <div class="section location-section">
-        <div class="content">
-            <div class="heading">
-                Location
+<div class="section playground-timings-section">
+    <div class="content">
+        <div class="heading">
+          Timings
+      </div>
+      <div class="details">
+        <div class="timings">
+            <div class="legend"></div>
+            <div class="legend-details">
+                <div class="more-info">
+                    <span>Some description about this category and timings info</span>
+                    <input type="button" value="Become a Member"></input>
+                </div>
+                <svg id="timingsWidget"></svg>
             </div>
-            <div id="location-map"></div>
-            <div class="address">
-                Mohite Park, Alandur
-                <br/>
-                Chennai
-                <div>
-                    <input type="button" value="Get Directions"></input>
-                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="section location-section">
+    <div class="content">
+        <div class="heading">
+            Location
+        </div>
+        <div id="location-map"></div>
+        <div class="address">
+            Mohite Park, Alandur
+            <br/>
+            Chennai
+            <div>
+                <input type="button" value="Get Directions"></input>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="section playground-photos">
-        <div class="content">
-            
-                <div class="heading">
-                    Photos
-                </div>
-                <div class="details photos">
-                    <a href="temp/court1.jpg" data-lightbox="playground">
-                        <img src="temp/court1.jpg" alt="First image" />
-                    </a>
-                    <a href="temp/court2.jpg" data-lightbox="playground">
-                        <img src="temp/court2.jpg" alt="First image" />
-                    </a>
-                    <a href="temp/court3.jpg" data-lightbox="playground">
-                        <img src="temp/court3.jpg" alt="First image" />
-                    </a>
-                    <a href="temp/court4.jpg" data-lightbox="playground">
-                        <img src="temp/court4.jpg" alt="First image" />
-                    </a>
-                    <a href="temp/court5.jpg" data-lightbox="playground">
-                        <img src="temp/court5.jpg" alt="First image" />
-                    </a>
-                </div>
-            
+<div class="section playground-photos-section">
+    <div class="content">
+        <div class="heading">
+            Photos
         </div>
+        <div class="details photos">
+            <a href="temp/court1.jpg" data-lightbox="playground">
+                <img src="temp/court1.jpg" alt="First image" />
+            </a>
+            <a href="temp/court2.jpg" data-lightbox="playground">
+                <img src="temp/court2.jpg" alt="First image" />
+            </a>
+            <a href="temp/court3.jpg" data-lightbox="playground">
+                <img src="temp/court3.jpg" alt="First image" />
+            </a>
+            <a href="temp/court4.jpg" data-lightbox="playground">
+                <img src="temp/court4.jpg" alt="First image" />
+            </a>
+            <a href="temp/court5.jpg" data-lightbox="playground">
+                <img src="temp/court5.jpg" alt="First image" />
+            </a>
+        </div>        
     </div>
+</div>
 
-    <div class="section playground-reviews" id="ratings">
-        <div class="content">
-            
-                <div class="heading">
-                    Reviews
-                </div>
-                <div class="details">
-                  <div class="review">
-                    <div class="date">
-                      <div class="positive">19 Oct 2015</div>
-                    </div>
-                    <div class="message"> Very good court to play and friendly coach who also push our limits to learn better </div>
-                    <div class="reviewer"> Sudhakar R </div>
-                  </div>
-                  <div class="review">
-                    <div class="date">
-                      <div class="positive">1 Aug 2015</div>
-                    </div>
-                    <div class="message"> To keep long story short... <br/>
-                      I am testing the reviews which are multiline </br>
-                      That can go on and on and on.... </div>
-                    <div class="reviewer"> Asmi S </div>
-                  </div>
-                  <div class="review">
-                    <div class="date">
-                      <div class="positive">12 Jan 2014</div>
-                    </div>
-                    <div class="message"> Very honest and professional institution </div>
-                    <div class="reviewer"> Anand A </div>
-                  </div>
-                  <div class="review">
-                    <div class="date">
-                      <div class="negative">22 Oct 2013</div>
-                    </div>
-                    <div class="message"> Did not get any slot to play. Called the coach multiple times but no response </div>
-                    <div class="reviewer"> Varghese </div>
-                  </div>
-                </div>
-            
+<div class="section playground-reviews-section" id="ratings">
+    <div class="content">
+        <div class="heading">
+            Reviews
         </div>
-    </div>
+        <div class="details">
+          <div class="review">
+            <div class="date">
+              <div class="positive">19 Oct 2015</div>
+          </div>
+          <div class="message"> Very good court to play and friendly coach who also push our limits to learn better </div>
+          <div class="reviewer"> Sudhakar R </div>
+      </div>
+      <div class="review">
+        <div class="date">
+          <div class="positive">1 Aug 2015</div>
+      </div>
+      <div class="message"> To keep long story short... <br/>
+          I am testing the reviews which are multiline </br>
+          That can go on and on and on.... </div>
+          <div class="reviewer"> Asmi S </div>
+      </div>
+      <div class="review">
+        <div class="date">
+          <div class="positive">12 Jan 2014</div>
+      </div>
+      <div class="message"> Very honest and professional institution </div>
+      <div class="reviewer"> Anand A </div>
+  </div>
+  <div class="review">
+    <div class="date">
+      <div class="negative">22 Oct 2013</div>
+  </div>
+  <div class="message"> Did not get any slot to play. Called the coach multiple times but no response </div>
+  <div class="reviewer"> Varghese </div>
+</div>
+</div>        
+</div>
 </div>
 
 <script src="scripts/lib/lightbox.min.js"></script>

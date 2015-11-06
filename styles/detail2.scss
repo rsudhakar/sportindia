@@ -1,49 +1,11 @@
 @import 'common';
 
 
-.header {
+.site-header {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-@mixin header-bg {
-  position: relative;
-  &:before {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    //-webkit-filter: blur(1px);
-    //-moz-filter: blur(1px);
-    //-o-filter: blur(1px);
-    //-ms-filter: blur(1px);
-    //filter: blur(1px);
-  }
-
-  .content {
-    position: relative;
-  }
-
-  .title {
-    display: inline-block;
-    font-size: 36px;
-    vertical-align: top;
-    padding: 40px;
-    text-align: center;
-
-    .sub-title {
-      font-size: 18px;
-      padding-top: 10px;
-    }
-
-    .details {
-      font-size: 16px;
-      padding-top: 15px;
-    }
-  }
-}
+@mixin header-bg {}
 
 @mixin dark-bg {
   background-image: url("../images/patterns/grey_wash_wall.png");
@@ -53,7 +15,6 @@
     color: white;
     border-bottom-color: $color-logo-yellow;
   }
-
 }
 
 input[type="button"] {
@@ -80,7 +41,11 @@ input[type="button"] {
     float: right;
     >span {
       display: inline-block;
-      padding: 5px;
+      padding: 5px 5px 3px 5px;
+      margin-bottom: 2px;
+      &.selected {
+        border-bottom: 1px solid white;
+      }
     }
   }
 }
@@ -90,10 +55,6 @@ input[type="button"] {
   border-bottom: none;
   display: inline-block;
   width: 100%;
-
-  &:nth-child(odd) {
-    background-color: #ffffff;
-  }
 
   .half {
     width: 50%;
@@ -120,14 +81,45 @@ input[type="button"] {
   display: inline-block;
 }
 
-.playground-header {
-  @include header-bg();
+.page-banner-section {
+  position: relative;
   display: block;
   height: 400px;
   padding: 0;
+
   &:before {
+    content: "";
     background: url('../temp/shuttle1.JPG') no-repeat center center;
     background-size: 100%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 36px;
+    vertical-align: top;
+    padding: 40px;
+    text-align: center;
+
+    .sub-title {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    .details {
+      font-size: 16px;
+      padding-top: 15px;
+    }
   }
 
   .wrapper {
@@ -139,10 +131,6 @@ input[type="button"] {
 
   .header {
     width: 50%;
-  }
-
-  .content {
-    height: 100%;
   }
 
   .options {
@@ -216,7 +204,8 @@ input[type="button"] {
   }
 }
 
-.section.playground-links {
+
+.playground-links-section {
   border-top: 1px solid $color-darkgray;
   padding: 10px 0;
 
@@ -225,51 +214,19 @@ input[type="button"] {
 
     span {
       padding: 0 5px;
+
+      &.selected {
+        border-bottom: 1px solid black;
+      }
     }
   }
 }
 
 
-.section.playground-details {
+.playground-details-section {
   background-image: url("../images/patterns/crossword.png");
   padding-top: 50px;
   font-size: 14px;
-}
-
-.event-header {
-  @include header-bg();
-  &:before {
-    background: url('../temp/badminton2.jpg') no-repeat top center;
-    background-size: 100%;
-  }
-
-  .event-title {
-    width: 100%;
-  }
-
-  .event-date {
-    display: inline-block;
-    background: url('../images/date.png') no-repeat;
-    background-size: 100% 100%;
-    width: 100px;
-    height: 120px;
-
-    .day-month {
-      padding: 35px 0 5px 0;
-      text-align: center;
-      font-size: 22px;
-    }
-
-    .year {
-      font-size: 26px;
-      text-align: center;
-    }
-  }
-
-  #location-map {
-    width: 100%;
-    height: 300px;
-  }
 }
 
 .playground-info {
@@ -405,11 +362,11 @@ input[type="button"] {
   }
 }
 
-.section.playground-timings {
+.playground-timings-section {
   background-image: url("../images/patterns/crossword.png");
 }
 
-.section.location-section {
+.location-section {
   @include dark-bg();
 
   #location-map {
@@ -433,7 +390,7 @@ input[type="button"] {
   }
 }
 
-.section.playground-photos {
+.playground-photos-section {
   @include dark-bg();
 
   .photos {
@@ -445,7 +402,7 @@ input[type="button"] {
 }
 
 
-.section.playground-reviews {
+.playground-reviews-section {
   background-image: url("../images/patterns/debut_light.png");
 }
 

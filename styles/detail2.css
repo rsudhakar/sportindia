@@ -32,27 +32,27 @@ li {
 a {
   text-decoration: none; }
 
-.header {
+.site-header {
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
-  .header .content {
+  .site-header .content {
     width: 900px;
     margin: 0 auto; }
-    .header .content .games {
+    .site-header .content .games {
       display: inline-block;
       color: #ffffff; }
-      .header .content .games > div {
+      .site-header .content .games > div {
         display: inline-block;
         padding: 10px; }
-      .header .content .games > div.selected {
+      .site-header .content .games > div.selected {
         background-color: #EFEFEF;
         font-weight: bold;
         color: #000000; }
-    .header .content .login {
+    .site-header .content .login {
       float: right;
       display: inline-block;
       padding: 10px; }
@@ -68,7 +68,7 @@ a {
     width: 900px;
     margin: auto; }
 
-.header {
+.site-header {
   background-color: rgba(0, 0, 0, 0.75); }
 
 input[type="button"] {
@@ -91,15 +91,16 @@ input[type="button"] {
     float: right; }
     .entity-links > span > span {
       display: inline-block;
-      padding: 5px; }
+      padding: 5px 5px 3px 5px;
+      margin-bottom: 2px; }
+      .entity-links > span > span.selected {
+        border-bottom: 1px solid white; }
 
 .section {
   padding: 30px 0;
   border-bottom: none;
   display: inline-block;
   width: 100%; }
-  .section:nth-child(odd) {
-    background-color: #ffffff; }
   .section .half {
     width: 50%; }
   .section .heading {
@@ -119,69 +120,67 @@ input[type="button"] {
   height: 50px;
   display: inline-block; }
 
-.playground-header {
+.page-banner-section {
   position: relative;
   display: block;
   height: 400px;
   padding: 0; }
-  .playground-header:before {
+  .page-banner-section:before {
     content: "";
+    background: url("../temp/shuttle1.JPG") no-repeat center center;
+    background-size: 100%;
     display: inline-block;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0; }
-  .playground-header .content {
-    position: relative; }
-  .playground-header .title {
+  .page-banner-section .content {
+    position: relative;
+    height: 100%; }
+  .page-banner-section .title {
     display: inline-block;
     font-size: 36px;
     vertical-align: top;
     padding: 40px;
     text-align: center; }
-    .playground-header .title .sub-title {
+    .page-banner-section .title .sub-title {
       font-size: 18px;
       padding-top: 10px; }
-    .playground-header .title .details {
+    .page-banner-section .title .details {
       font-size: 16px;
       padding-top: 15px; }
-  .playground-header:before {
-    background: url("../temp/shuttle1.JPG") no-repeat center center;
-    background-size: 100%; }
-  .playground-header .wrapper {
+  .page-banner-section .wrapper {
     position: absolute;
     bottom: 0px;
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%; }
-  .playground-header .header {
+  .page-banner-section .header {
     width: 50%; }
-  .playground-header .content {
-    height: 100%; }
-  .playground-header .options {
+  .page-banner-section .options {
     position: relative;
     float: right;
     margin: 82px 40px;
     width: 42px; }
-    .playground-header .options i {
+    .page-banner-section .options i {
       font-size: 30px;
       border-radius: 50px;
       background-color: rgba(255, 255, 255, 0.4);
       line-height: 46px; }
-  .playground-header .playground-name {
+  .page-banner-section .playground-name {
     border-bottom: none;
     margin-bottom: 0; }
-    .playground-header .playground-name .name {
+    .page-banner-section .playground-name .name {
       font-weight: bold;
       font-size: 34px;
       display: inline-block;
       max-width: 70%; }
-      .playground-header .playground-name .name .details {
+      .page-banner-section .playground-name .name .details {
         font-weight: normal; }
-        .playground-header .playground-name .name .details .name {
+        .page-banner-section .playground-name .name .details .name {
           font-size: 16px;
           display: inline-block; }
-    .playground-header .playground-name .rating {
+    .page-banner-section .playground-name .rating {
       position: absolute;
       top: 0;
       right: 0;
@@ -189,82 +188,38 @@ input[type="button"] {
       display: inline-block;
       font-size: 12px;
       font-weight: bold; }
-      .playground-header .playground-name .rating span {
+      .page-banner-section .playground-name .rating span {
         display: inline-block;
         padding: 0 5px; }
-        .playground-header .playground-name .rating span i {
+        .page-banner-section .playground-name .rating span i {
           padding: 5px;
           border-radius: 15px; }
-          .playground-header .playground-name .rating span i.positive {
+          .page-banner-section .playground-name .rating span i.positive {
             color: #228022;
             border: 2px solid #228022; }
-          .playground-header .playground-name .rating span i.negative {
+          .page-banner-section .playground-name .rating span i.negative {
             color: darkred;
             border: 2px solid darkred; }
-        .playground-header .playground-name .rating span div {
+        .page-banner-section .playground-name .rating span div {
           display: block;
           text-align: center;
           padding-top: 7px;
           font-size: 14px; }
 
-.section.playground-links {
+.playground-links-section {
   border-top: 1px solid #bfbfbf;
   padding: 10px 0; }
-  .section.playground-links .links {
+  .playground-links-section .links {
     text-align: right; }
-    .section.playground-links .links span {
+    .playground-links-section .links span {
       padding: 0 5px; }
+      .playground-links-section .links span.selected {
+        border-bottom: 1px solid black; }
 
-.section.playground-details {
+.playground-details-section {
   background-image: url("../images/patterns/crossword.png");
   padding-top: 50px;
   font-size: 14px; }
-
-.event-header {
-  position: relative; }
-  .event-header:before {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .event-header .content {
-    position: relative; }
-  .event-header .title {
-    display: inline-block;
-    font-size: 36px;
-    vertical-align: top;
-    padding: 40px;
-    text-align: center; }
-    .event-header .title .sub-title {
-      font-size: 18px;
-      padding-top: 10px; }
-    .event-header .title .details {
-      font-size: 16px;
-      padding-top: 15px; }
-  .event-header:before {
-    background: url("../temp/badminton2.jpg") no-repeat top center;
-    background-size: 100%; }
-  .event-header .event-title {
-    width: 100%; }
-  .event-header .event-date {
-    display: inline-block;
-    background: url("../images/date.png") no-repeat;
-    background-size: 100% 100%;
-    width: 100px;
-    height: 120px; }
-    .event-header .event-date .day-month {
-      padding: 35px 0 5px 0;
-      text-align: center;
-      font-size: 22px; }
-    .event-header .event-date .year {
-      font-size: 26px;
-      text-align: center; }
-  .event-header #location-map {
-    width: 100%;
-    height: 300px; }
 
 .playground-info {
   padding-bottom: 30px; }
@@ -353,20 +308,20 @@ input[type="button"] {
     box-sizing: border-box;
     font-size: 20px; }
 
-.section.playground-timings {
+.playground-timings-section {
   background-image: url("../images/patterns/crossword.png"); }
 
-.section.location-section {
+.location-section {
   background-image: url("../images/patterns/grey_wash_wall.png");
   color: white; }
-  .section.location-section .heading {
+  .location-section .heading {
     color: white;
     border-bottom-color: #ffd21f; }
-  .section.location-section #location-map {
+  .location-section #location-map {
     display: inline-block;
     width: 70%;
     height: 400px; }
-  .section.location-section .address {
+  .location-section .address {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -379,16 +334,16 @@ input[type="button"] {
     align-items: center;
     text-align: center; }
 
-.section.playground-photos {
+.playground-photos-section {
   background-image: url("../images/patterns/grey_wash_wall.png");
   color: white; }
-  .section.playground-photos .heading {
+  .playground-photos-section .heading {
     color: white;
     border-bottom-color: #ffd21f; }
-  .section.playground-photos .photos a img {
+  .playground-photos-section .photos a img {
     height: 100px; }
 
-.section.playground-reviews {
+.playground-reviews-section {
   background-image: url("../images/patterns/debut_light.png"); }
 
 .review {
