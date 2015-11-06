@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "chosen";
+  src: url("../fonts/OpenSans-Regular.ttf"); }
+@font-face {
+  font-family: "improved";
+  src: url("../fonts/Quicksand-Regular.otf"); }
+body {
+  background-color: #EFEFEF;
+  font-family: chosen; }
+
+input[type="button"] {
+  border: 1px solid #bfbfbf;
+  border-radius: 4px; }
+
+.site-label {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 0; }
+
+.sitename {
+  font-family: sans-serif;
+  display: inline-block;
+  color: #00aaff; }
+  .sitename span {
+    color: #ffd21f; }
+
+li {
+  padding: 4px 0; }
+
+a {
+  text-decoration: none; }
+
+.site-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .site-header .content {
+    width: 900px;
+    margin: 0 auto; }
+    .site-header .content .games {
+      display: inline-block;
+      color: #ffffff; }
+      .site-header .content .games > div {
+        display: inline-block;
+        padding: 10px; }
+      .site-header .content .games > div.selected {
+        background-color: #EFEFEF;
+        font-weight: bold;
+        color: #000000; }
+    .site-header .content .login {
+      float: right;
+      display: inline-block;
+      padding: 10px; }
+
+.container {
+  position: relative; }
+
+.section {
+  background-color: #EFEFEF;
+  border-bottom: 2px solid #bfbfbf;
+  padding: 30px 0; }
+  .section .content {
+    width: 900px;
+    margin: auto; }
+
+input[type="text"], textarea {
+  background-color: transparent;
+  border: 1px dashed black;
+  width: 100%;
+  margin: 2px; }
+  input[type="text"].mandatory, textarea.mandatory {
+    background-color: rgba(255, 0, 0, 0.15); }
+
+label {
+  cursor: pointer; }
+
+textarea {
+  resize: vertical; }
+
+.hide {
+  visibility: hidden; }
+
+.editor-note {
+  color: #595656;
+  font-style: italic; }
+
+.page-banner-section .options {
+  width: 75px; }
+
+.playground-details-section input[type="text"] {
+  display: inline-block;
+  width: 50px; }
+  .playground-details-section input[type="text"].medium {
+    width: 100px; }
+.playground-details-section input[type="checkbox"] {
+  display: none; }
+  .playground-details-section input[type="checkbox"]:not(:checked) + i {
+    color: #bfbfbf; }
+
+.location-section #location-map-input {
+  border: 1px solid black;
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  width: 50%; }
+
+/*# sourceMappingURL=playground-editor.css.map */

@@ -96,6 +96,10 @@ input[type="button"] {
     display: inline-block;
   }
 
+  .name {
+    width: 100%
+  }
+
   .content {
     position: relative;
     height: 100%;
@@ -250,6 +254,7 @@ input[type="button"] {
       display: inline-block;
       padding: 5px;
       margin-right: 10px;
+      vertical-align: top;
 
       i {
         color: $color-logo-blue;
@@ -258,7 +263,7 @@ input[type="button"] {
 
     .big {
       .info-tag {
-        width: 30%;
+        min-width: 230px;
         box-sizing: border-box;
         font-size: 20px;
       }

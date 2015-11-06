@@ -1,0 +1,67 @@
+@import 'common';
+
+input[type="text"], textarea {  
+    background-color: transparent;
+    border: 1px dashed black;
+    width: 100%;
+    margin: 2px;
+
+    &.mandatory {
+        background-color: rgba(255,0,0,0.15);
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+.hide {
+    visibility: hidden;
+}
+
+.editor-note {
+    color: #595656;
+    font-style: italic;
+}
+
+
+.page-banner-section {
+    .options {
+        width: 75px;
+    }
+}
+
+.playground-details-section {
+    input[type="text"] {
+        display: inline-block;
+        width: 50px;
+
+        &.medium {
+            width: 100px;
+        }
+    }
+
+    input[type="checkbox"] {
+        display: none;
+        
+        &:not(:checked) + i {
+            color: $color-darkgray;
+        } 
+    }
+}
+
+.location-section {
+    #location-map-input {
+        border: 1px solid black;
+        background: white;
+        padding: 5px;
+        margin: 5px;
+        color: black;
+        width: 50%;
+    }
+}

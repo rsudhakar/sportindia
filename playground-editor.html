@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="styles/normalize.css"/>
     <link rel="stylesheet" href="styles/lightbox.css"/>
     <link rel="stylesheet" href="styles/playground2.css"/>
+    <link rel="stylesheet" href="styles/playground-editor.css"/>
     <link rel="stylesheet" href="fontello/css/fontello.css"/>
 
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script src="scripts/lib/jquery.min.js"></script>
     <script src="scripts/lib/lodash.min.js"></script>
     <script src="scripts/lib/d3.min.js"></script>
@@ -18,7 +19,7 @@
 
     <script src="scripts/locationMap.js"></script>
     <script src="scripts/slotsWidget2.js"></script>
-    <script src="scripts/playground2.js"></script>
+    <script src="scripts/playground-editor.js"></script>
 
 </head>
 
@@ -33,19 +34,6 @@
                     </div>
                 </a>
             </div>
-            <span class="entity-name" data-0="display:!none" data-top-bottom="display:!inline-block" data-anchor-target="#entity-heading">
-                Army Officers Training Centre
-            </span>
-            <div class="entity-links" data-0="display:!none" data-top-bottom="display:!block" data-anchor-target="#entity-heading-links">
-                <span>
-                    <span class="selected">About</span>
-                    <span>Timings</span>
-                    <span>Location</span>
-                    <span>Members</span>
-                    <span>Photos</span>
-                    <span>Reviews</span>
-                </span>
-            </div>
         </div>
     </div>
 
@@ -53,10 +41,22 @@
     <div class="section page-banner-section">
         <div class="options">
             <div>
-                <i class="icon-lodging"></i>
-                <i class="icon-t-shirt"></i>
-                <i class="icon-garden"></i>
-                <i class="icon-hourglass"></i>
+                <label>
+                    <input type="checkbox"></input>
+                    <i class="icon-lodging"></i>
+                </label>
+                <label>
+                    <input type="checkbox"></input>
+                    <i class="icon-t-shirt"></i>
+                </label>
+                <label>
+                    <input type="checkbox"></input>
+                    <i class="icon-garden"></i>
+                </label>
+                <label>
+                    <input type="checkbox"></input>
+                    <i class="icon-hourglass"></i>
+                </label>                
             </div>
         </div>
         <div class="wrapper">
@@ -64,19 +64,20 @@
                 <div class="heading playground-name">
                     <div class="tennis-icon"></div>
                     <div id="entity-heading" class="name">
-                        Army Officers Training Centre
-                        <div class="details">
-                            Alandur, Chennai
+                        <input type="text" class="mandatory" placeholder="Entity Name"></input>
+                        
+                        <div class="details hide">
+                            <span>&nbsp;</span>
                         </div>
                     </div>
-                    <div class="rating">                        
+                    <div class="rating hide">
                         <span>
                             <i class="positive icon-emo-happy"></i>
-                            <div>15</div>
+                            <div>&nbsp;</div>
                         </span>
                         <span>
                             <i class="negative icon-emo-unhappy"></i>
-                            <div>2</div>
+                            <div>&nbsp;</div>
                         </span>
                     </div>
                 </div>
@@ -87,13 +88,8 @@
 
     <div id="entity-heading-links" class="section playground-links-section">
         <div class="content">
-            <div class="links">
-                <span class="selected">About</span>
-                <span>Timings</span>
-                <span>Location</span>
-                <span>Members</span>
-                <span>Photos</span>
-                <span>Reviews</span>
+            <div class="links hide">
+                <span class="selected">&nbsp;</span>
             </div>
         </div>
     </div>
@@ -102,9 +98,7 @@
         <div class="content">            
             <div class="details">
                 <div class="playground-info">
-                 Established in the year 2004 in T.Nagar.
-                 Classes are taken in 2 skate grounds at the ratio of 10: 1 student and coach.
-                 Chennai sports academy also conduct tournaments
+                    <textarea placeholder="Short description about the entity"></textarea>
              </div>
              <div class="facility-details">
                 <table class="court-info">
@@ -113,9 +107,23 @@
                             Type
                         </td>
                         <td class="big">
-                            <div class="info-tag"><i class="icon-columns"></i> 3 Courts</div>
-                            <div class="info-tag"><i class="icon-th"></i> Mat surface</div>
-                            <div class="info-tag"><i class="icon-lightbulb"></i> Flood lights</div>
+                            <div class="info-tag">
+                                <i class="icon-columns"></i>
+                                <input type="text" class="mandatory" name="courts" placeholder="?"></input> Court(s)
+                            </div>
+                            <div class="info-tag">
+                                <i class="icon-th"></i>
+                                <input type="text" class="medium" name="surface" placeholder="?"></input> Surface
+                            </div>
+                            <div>
+                                <div class="info-tag">
+                                    <label>
+                                        <input type="checkbox" name="floodlights">
+                                        <i class="icon-lightbulb"></i> Flood Lights
+                                        </input>
+                                    </label>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -123,10 +131,36 @@
                             Facilities
                         </td>
                         <td>
-                            <div class="info-tag"><i class="icon-cab"></i> Car parking</div>
-                            <div class="info-tag"><i class="icon-suitcase"></i> Changing rooms</div>
-                            <div class="info-tag"><i class="icon-megaphone"></i> Public announcement systems</div>
-                            <div class="info-tag"><i class="icon-heartbeat"></i> Fitness trainer</div>
+                            <div class="info-tag">
+                                <label>
+                                    <input type="checkbox" name="carparking">
+                                    <i class="icon-cab"></i> Car parking
+                                </label>
+                            </div>
+                            <div class="info-tag">
+                                <label>
+                                    <input type="checkbox" name="changingrooms">
+                                    <i class="icon-suitcase"></i> Changing Rooms
+                                </label>
+                            </div>
+                            <div class="info-tag">
+                                <label>
+                                    <input type="checkbox" name="publicannouncement">
+                                    <i class="icon-megaphone"></i> Public Announcement System
+                                </label>
+                            </div>
+                            <div class="info-tag">
+                                <label>
+                                    <input type="checkbox" name="fitnesstrainer">
+                                    <i class="icon-heartbeat"></i> Fitness Trainer
+                                </label>
+                            </div>
+                            <div class="info-tag">
+                                <label>
+                                    <input type="checkbox" name="ladyfitnesstrainer">
+                                    <i class="icon-heartbeat"></i> Lady Fitness Trainer
+                                </label>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -164,14 +198,15 @@
         <div class="heading">
             Location
         </div>
+        <input id="location-map-input" class="controls" type="text" placeholder="Select area"></input>
         <div id="location-map"></div>
         <div class="address">
-            Mohite Park, Alandur
-            <br/>
-            Chennai
-            <div>
-                <input type="button" value="Get Directions"></input>
-            </div>
+            Address
+            <input type="text" name="line1" placeholder="Line 1"></input>
+            <input type="text" name="line1" placeholder="Line 2"></input>
+            <input type="text" name="area" class="mandatory" placeholder="Area/Locality"></input>
+            <input type="text" name="city" class="mandatory" placeholder="City"></input>
+            <input type="text" name="pincode" placeholder="Pincode"></input>
         </div>
     </div>
 </div>
@@ -199,46 +234,6 @@
             </a>
         </div>        
     </div>
-</div>
-
-<div class="section playground-reviews-section" id="ratings">
-    <div class="content">
-        <div class="heading">
-            Reviews
-        </div>
-        <div class="details">
-          <div class="review">
-            <div class="date">
-              <div class="positive">19 Oct 2015</div>
-          </div>
-          <div class="message"> Very good court to play and friendly coach who also push our limits to learn better </div>
-          <div class="reviewer"> Sudhakar R </div>
-      </div>
-      <div class="review">
-        <div class="date">
-          <div class="positive">1 Aug 2015</div>
-      </div>
-      <div class="message"> To keep long story short... <br/>
-          I am testing the reviews which are multiline </br>
-          That can go on and on and on.... </div>
-          <div class="reviewer"> Asmi S </div>
-      </div>
-      <div class="review">
-        <div class="date">
-          <div class="positive">12 Jan 2014</div>
-      </div>
-      <div class="message"> Very honest and professional institution </div>
-      <div class="reviewer"> Anand A </div>
-  </div>
-  <div class="review">
-    <div class="date">
-      <div class="negative">22 Oct 2013</div>
-  </div>
-  <div class="message"> Did not get any slot to play. Called the coach multiple times but no response </div>
-  <div class="reviewer"> Varghese </div>
-</div>
-</div>        
-</div>
 </div>
 
 <script src="scripts/lib/lightbox.min.js"></script>

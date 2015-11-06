@@ -132,6 +132,8 @@ input[type="button"] {
     width: 50px;
     height: 50px;
     display: inline-block; }
+  .page-banner-section .name {
+    width: 100%; }
   .page-banner-section .content {
     position: relative;
     height: 100%; }
@@ -232,11 +234,12 @@ input[type="button"] {
     .playground-details-section .court-info .info-tag {
       display: inline-block;
       padding: 5px;
-      margin-right: 10px; }
+      margin-right: 10px;
+      vertical-align: top; }
       .playground-details-section .court-info .info-tag i {
         color: #00aaff; }
     .playground-details-section .court-info .big .info-tag {
-      width: 30%;
+      min-width: 230px;
       box-sizing: border-box;
       font-size: 20px; }
 
