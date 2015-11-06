@@ -1,12 +1,6 @@
 @import 'common';
 
 
-.site-header {
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-@mixin header-bg {}
-
 @mixin dark-bg {
   background-image: url("../images/patterns/grey_wash_wall.png");
   color: white;
@@ -17,37 +11,40 @@
   }
 }
 
+.site-header {
+  background-color: rgba(0, 0, 0, 0.75);
+
+  .entity-name {
+    color: white;
+    padding-left: 5px;
+    display:none;
+  }
+
+  .entity-links {
+    color: #FFF;
+    font-size: 13px;
+    display: none;
+    border-top: 1px solid black;
+
+    >span {
+      float: right;
+      >span {
+        display: inline-block;
+        padding: 5px 5px 3px 5px;
+        margin-bottom: 2px;
+        &.selected {
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+}
+
 input[type="button"] {
   padding: 5px;
   margin: 5px;
   color: black;
   background-color: $color-logo-yellow;
-}
-
-
-.entity-name {
-  color: white;
-  padding-left: 5px;
-  display:none;
-}
-
-.entity-links {
-  color: #FFF;
-  font-size: 13px;
-  display: none;
-  border-top: 1px solid black;
-
-  >span {
-    float: right;
-    >span {
-      display: inline-block;
-      padding: 5px 5px 3px 5px;
-      margin-bottom: 2px;
-      &.selected {
-        border-bottom: 1px solid white;
-      }
-    }
-  }
 }
 
 .section {
@@ -73,14 +70,6 @@ input[type="button"] {
   }
 }
 
-.tennis-icon {
-  background-image: url('../images/racket1.png');
-  background-size: 50px 50px;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-}
-
 .page-banner-section {
   position: relative;
   display: block;
@@ -97,6 +86,14 @@ input[type="button"] {
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .tennis-icon {
+    background-image: url('../images/racket1.png');
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
   }
 
   .content {
@@ -227,143 +224,140 @@ input[type="button"] {
   background-image: url("../images/patterns/crossword.png");
   padding-top: 50px;
   font-size: 14px;
-}
 
-.playground-info {
-  padding-bottom: 30px;
-}
-
-.event-categories {
-  .type.collapsed {
-    .category-label {
-      background-color: $color-logo-yellow;
-    }
-    .category-details {
-      display: none;
-    }
+  .playground-info {
+    padding-bottom: 30px;
   }
 
-  .type.expanded {
-    .category-label {
-      border: 1px solid $color-logo-yellow;
-    }
-    .category-details {
-      margin-bottom: 30px;
-      display: block;
-    }
-  }
+  .court-info {
+    width: 100%;
 
-  .category-label {
-    font-size: 20px;
-    padding: 10px;
-    position: relative;
-    margin: 2px;
-    display: inline-block;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .category-details {
-    > div {
-      position: relative;
-      display: inline-block;
-      width: 33%;
-      height: 300px;
-      //border: 1px solid $color-logo-yellow;
-      border-radius: 5px;
-      vertical-align: top;
-      box-sizing: border-box;
-      margin: 15px 0;
-      padding: 10px 0;
-      text-align: center;
+    td.title {
+      width: 150px;
     }
 
-    .numbering {
-      font-size: 12px;
-      background-color: $color-logo-yellow;
-      text-align: center;
-      display: inline-block;
-      margin: auto;
-      padding: 5px 10px;
-      border-radius: 15px;
-    }
-
-    .message {
-      position: absolute;
-      box-sizing: border-box;
-      top: 30px;
-      padding: 15px;
-      text-align: center;
-      width: 100%;
-    }
-
-    .action {
-      position: absolute;
-      bottom: 0px;
+    td {
       padding: 5px;
-      text-align: center;
-      width: 100%;
+      >div {
+        box-sizing: border-box;
+      }
+    }
+    .segment {
+      width: 100px;
     }
 
-    .pay {
-      padding: 10px;
-      background-color: $color-logo-blue;
-      color: #ffffff;
-      border-radius: 5px;
-      border: 1px solid $color-logo-yellow;
-      margin-top: 5px;
-    }
-
-    .enroll {
-      background: url("../images/enroll.png") no-repeat center center;
-    }
-    .participate {
-      background: url("../images/participate.png") no-repeat center center;
-    }
-    .win {
-      background: url("../images/win.png") no-repeat center center;
-    }
-  }
-}
-
-.court-info {
-  width: 100%;
-
-  td.title {
-    width: 150px;
-  }
-
-  td {
-    padding: 5px;
-    >div {
-      box-sizing: border-box;
-    }
-  }
-  .segment {
-    width: 100px;
-  }
-
-  .info-tag {
-    display: inline-block;
-    padding: 5px;
-    margin-right: 10px;
-
-    i {
-      color: $color-logo-blue;
-    }
-  }
-
-  .big {
     .info-tag {
-      width: 30%;
-      box-sizing: border-box;
-      font-size: 20px;
+      display: inline-block;
+      padding: 5px;
+      margin-right: 10px;
+
+      i {
+        color: $color-logo-blue;
+      }
+    }
+
+    .big {
+      .info-tag {
+        width: 30%;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
     }
   }
 }
 
 .playground-timings-section {
   background-image: url("../images/patterns/crossword.png");
+
+  .legend {
+    width: 300px;
+    padding: 20px 0;
+    float: left;
+    text-align: left;
+    border-right: 5px solid $color-gray;
+    box-sizing: border-box;
+
+    .item {
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+      border-bottom: 1px solid $color-gray;
+      
+      &:nth-child(1) {
+        border-top: 1px solid $color-gray;
+      }
+
+      &.selected {
+        background-color: $color-gray;
+      }
+
+      .category {
+        font-size: 12px;
+        color: $color-logo-blue;
+
+        &:before {
+          font-family: "fontello";
+          content: '\e827';
+          padding: 0 5px 0 0;
+        }
+      }
+    }
+  }  
+
+  .legend-details {
+    box-sizing: border-box;
+    width: 600px;
+    float: right;
+
+    .more-info {
+      font-size: 14px;
+      display: inline-block;
+      width: 100%;
+
+      span {
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0 0 30px 20px;
+        padding: 7px;
+        width: 70%;
+      }
+
+      input[type="button"] {
+        float: right;
+        margin: 0;
+      }
+    }
+
+    #timingsWidget {
+      width: 100%;
+      height: 500px;
+      font-size: 14px;
+      box-sizing: border-box;
+      padding-top: 10px;
+
+      .time {
+        font-size: 11px;
+      }
+
+      .timeTick {
+        stroke-width: 2px;
+        stroke: $color-logo-yellow;
+      }
+
+      .dayLines, {
+        stroke-width: 1px;
+        shape-rendering: crispEdges;
+        stroke: #24E917;
+      }
+
+      .slotName {
+        fill: #24E917;
+      }
+    }
+  }
 }
 
 .location-section {
@@ -397,164 +391,72 @@ input[type="button"] {
     a img {
       height: 100px;
     }
-  }
-  
+  }  
 }
-
 
 .playground-reviews-section {
   background-image: url("../images/patterns/debut_light.png");
-}
 
-.review {
-  position: relative;
-  padding: 20px 0;
+  .review {
+    position: relative;
+    padding: 20px 0;
 
-  .date {
-    width: 65px;
-    height: 100%;
-    position: absolute;
-    border-right: 1px solid $color-logo-blue;
-
-    > div {
-      font-size: 12px;
+    .date {
+      width: 65px;
+      height: 100%;
       position: absolute;
-      display: inline-block;
-      text-align: center;
-      padding: 2px 4px;
+      border-right: 1px solid $color-logo-blue;
 
-      &:after {
-        font-family: 'fontello';
-        font-size: 9px;
-        line-height: 9px;
+      > div {
+        font-size: 12px;
         position: absolute;
-        right: -9px;
-        top: 10px;
-        color: #ffffff;
-        padding: 4px;
-        border-radius: 10px;
+        display: inline-block;
+        text-align: center;
+        padding: 2px 4px;
+
+        &:after {
+          font-family: 'fontello';
+          font-size: 9px;
+          line-height: 9px;
+          position: absolute;
+          right: -9px;
+          top: 10px;
+          color: #ffffff;
+          padding: 4px;
+          border-radius: 10px;
+        }
+      }
+
+      > div.positive {
+        &:after {
+          content: "\e867";
+          background-color: $color-positive;
+        }
+      }
+
+      > div.negative {
+        &:after {
+          content: "\e868";
+          background-color: $color-negative;
+        }
       }
     }
 
-    > div.positive {
-      &:after {
-        content: "\e867";
-        background-color: $color-positive;
-      }
+    .message, .reviewer {
+      padding-left: 85px;
+      font-style: italic;
+      font-size: 14px;
     }
 
-    > div.negative {
-      &:after {
-        content: "\e868";
-        background-color: $color-negative;
-      }
-    }
-  }
-
-  .message, .reviewer {
-    padding-left: 85px;
-    font-style: italic;
-    font-size: 14px;
-  }
-
-  .reviewer {
-    &:before {
-      content: "-"
-    }
-
-    text-align: right;
-  }
-}
-
-.legend {
-  width: 300px;
-  padding: 20px 0;
-  float: left;
-  text-align: left;
-  border-right: 5px solid $color-gray;
-  box-sizing: border-box;
-
-  .item {
-    display: inline-block;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 10px;
-    width: 100%;
-    border-bottom: 1px solid $color-gray;
-    
-    &:nth-child(1) {
-      border-top: 1px solid $color-gray;
-    }
-
-    &.selected {
-      background-color: $color-gray;
-    }
-
-    .category {
-      font-size: 12px;
-      color: $color-logo-blue;
-
+    .reviewer {
       &:before {
-        font-family: "fontello";
-        content: '\e827';
-        padding: 0 5px 0 0;
+        content: "-"
       }
+
+      text-align: right;
     }
   }
 }
 
-.legend-details {
-  box-sizing: border-box;
-  width: 600px;
-  float: right;
-
-  .more-info {
-    font-size: 14px;
-    display: inline-block;
-    width: 100%;
-
-    span {
-      display: inline-block;
-      box-sizing: border-box;
-      margin: 0 0 30px 20px;
-      padding: 7px;
-      width: 70%;
-    }
-
-    input[type="button"] {
-      float: right;
-      margin: 0;
-    }
-  }
-
-  #timingsWidget {
-    width: 100%;
-    height: 500px;
-    font-size: 14px;
-    box-sizing: border-box;
-    padding-top: 10px;
-
-    .time {
-      font-size: 11px;
-    }
-
-    .timeTick {
-      stroke-width: 2px;
-      stroke: $color-logo-yellow;
-    }
-
-    .dayLines, {
-      stroke-width: 1px;
-      shape-rendering: crispEdges;
-      stroke: #24E917;
-    }
-
-    .slotName {
-      fill: #24E917;
-    }
-  }
-  
-}
 
 

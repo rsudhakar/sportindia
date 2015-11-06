@@ -70,31 +70,29 @@ a {
 
 .site-header {
   background-color: rgba(0, 0, 0, 0.75); }
+  .site-header .entity-name {
+    color: white;
+    padding-left: 5px;
+    display: none; }
+  .site-header .entity-links {
+    color: #FFF;
+    font-size: 13px;
+    display: none;
+    border-top: 1px solid black; }
+    .site-header .entity-links > span {
+      float: right; }
+      .site-header .entity-links > span > span {
+        display: inline-block;
+        padding: 5px 5px 3px 5px;
+        margin-bottom: 2px; }
+        .site-header .entity-links > span > span.selected {
+          border-bottom: 1px solid white; }
 
 input[type="button"] {
   padding: 5px;
   margin: 5px;
   color: black;
   background-color: #ffd21f; }
-
-.entity-name {
-  color: white;
-  padding-left: 5px;
-  display: none; }
-
-.entity-links {
-  color: #FFF;
-  font-size: 13px;
-  display: none;
-  border-top: 1px solid black; }
-  .entity-links > span {
-    float: right; }
-    .entity-links > span > span {
-      display: inline-block;
-      padding: 5px 5px 3px 5px;
-      margin-bottom: 2px; }
-      .entity-links > span > span.selected {
-        border-bottom: 1px solid white; }
 
 .section {
   padding: 30px 0;
@@ -113,13 +111,6 @@ input[type="button"] {
       font-size: 14px;
       padding-top: 5px; }
 
-.tennis-icon {
-  background-image: url("../images/racket1.png");
-  background-size: 50px 50px;
-  width: 50px;
-  height: 50px;
-  display: inline-block; }
-
 .page-banner-section {
   position: relative;
   display: block;
@@ -135,6 +126,12 @@ input[type="button"] {
     position: absolute;
     top: 0;
     left: 0; }
+  .page-banner-section .tennis-icon {
+    background-image: url("../images/racket1.png");
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-block; }
   .page-banner-section .content {
     position: relative;
     height: 100%; }
@@ -220,96 +217,91 @@ input[type="button"] {
   background-image: url("../images/patterns/crossword.png");
   padding-top: 50px;
   font-size: 14px; }
-
-.playground-info {
-  padding-bottom: 30px; }
-
-.event-categories .type.collapsed .category-label {
-  background-color: #ffd21f; }
-.event-categories .type.collapsed .category-details {
-  display: none; }
-.event-categories .type.expanded .category-label {
-  border: 1px solid #ffd21f; }
-.event-categories .type.expanded .category-details {
-  margin-bottom: 30px;
-  display: block; }
-.event-categories .category-label {
-  font-size: 20px;
-  padding: 10px;
-  position: relative;
-  margin: 2px;
-  display: inline-block;
-  border-radius: 5px;
-  cursor: pointer; }
-.event-categories .category-details > div {
-  position: relative;
-  display: inline-block;
-  width: 33%;
-  height: 300px;
-  border-radius: 5px;
-  vertical-align: top;
-  box-sizing: border-box;
-  margin: 15px 0;
-  padding: 10px 0;
-  text-align: center; }
-.event-categories .category-details .numbering {
-  font-size: 12px;
-  background-color: #ffd21f;
-  text-align: center;
-  display: inline-block;
-  margin: auto;
-  padding: 5px 10px;
-  border-radius: 15px; }
-.event-categories .category-details .message {
-  position: absolute;
-  box-sizing: border-box;
-  top: 30px;
-  padding: 15px;
-  text-align: center;
-  width: 100%; }
-.event-categories .category-details .action {
-  position: absolute;
-  bottom: 0px;
-  padding: 5px;
-  text-align: center;
-  width: 100%; }
-.event-categories .category-details .pay {
-  padding: 10px;
-  background-color: #00aaff;
-  color: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #ffd21f;
-  margin-top: 5px; }
-.event-categories .category-details .enroll {
-  background: url("../images/enroll.png") no-repeat center center; }
-.event-categories .category-details .participate {
-  background: url("../images/participate.png") no-repeat center center; }
-.event-categories .category-details .win {
-  background: url("../images/win.png") no-repeat center center; }
-
-.court-info {
-  width: 100%; }
-  .court-info td.title {
-    width: 150px; }
-  .court-info td {
-    padding: 5px; }
-    .court-info td > div {
-      box-sizing: border-box; }
-  .court-info .segment {
-    width: 100px; }
-  .court-info .info-tag {
-    display: inline-block;
-    padding: 5px;
-    margin-right: 10px; }
-    .court-info .info-tag i {
-      color: #00aaff; }
-  .court-info .big .info-tag {
-    width: 30%;
-    box-sizing: border-box;
-    font-size: 20px; }
+  .playground-details-section .playground-info {
+    padding-bottom: 30px; }
+  .playground-details-section .court-info {
+    width: 100%; }
+    .playground-details-section .court-info td.title {
+      width: 150px; }
+    .playground-details-section .court-info td {
+      padding: 5px; }
+      .playground-details-section .court-info td > div {
+        box-sizing: border-box; }
+    .playground-details-section .court-info .segment {
+      width: 100px; }
+    .playground-details-section .court-info .info-tag {
+      display: inline-block;
+      padding: 5px;
+      margin-right: 10px; }
+      .playground-details-section .court-info .info-tag i {
+        color: #00aaff; }
+    .playground-details-section .court-info .big .info-tag {
+      width: 30%;
+      box-sizing: border-box;
+      font-size: 20px; }
 
 .playground-timings-section {
   background-image: url("../images/patterns/crossword.png"); }
+  .playground-timings-section .legend {
+    width: 300px;
+    padding: 20px 0;
+    float: left;
+    text-align: left;
+    border-right: 5px solid #EFEFEF;
+    box-sizing: border-box; }
+    .playground-timings-section .legend .item {
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+      border-bottom: 1px solid #EFEFEF; }
+      .playground-timings-section .legend .item:nth-child(1) {
+        border-top: 1px solid #EFEFEF; }
+      .playground-timings-section .legend .item.selected {
+        background-color: #EFEFEF; }
+      .playground-timings-section .legend .item .category {
+        font-size: 12px;
+        color: #00aaff; }
+        .playground-timings-section .legend .item .category:before {
+          font-family: "fontello";
+          content: '\e827';
+          padding: 0 5px 0 0; }
+  .playground-timings-section .legend-details {
+    box-sizing: border-box;
+    width: 600px;
+    float: right; }
+    .playground-timings-section .legend-details .more-info {
+      font-size: 14px;
+      display: inline-block;
+      width: 100%; }
+      .playground-timings-section .legend-details .more-info span {
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0 0 30px 20px;
+        padding: 7px;
+        width: 70%; }
+      .playground-timings-section .legend-details .more-info input[type="button"] {
+        float: right;
+        margin: 0; }
+    .playground-timings-section .legend-details #timingsWidget {
+      width: 100%;
+      height: 500px;
+      font-size: 14px;
+      box-sizing: border-box;
+      padding-top: 10px; }
+      .playground-timings-section .legend-details #timingsWidget .time {
+        font-size: 11px; }
+      .playground-timings-section .legend-details #timingsWidget .timeTick {
+        stroke-width: 2px;
+        stroke: #ffd21f; }
+      .playground-timings-section .legend-details #timingsWidget .dayLines {
+        stroke-width: 1px;
+        shape-rendering: crispEdges;
+        stroke: #24E917; }
+      .playground-timings-section .legend-details #timingsWidget .slotName {
+        fill: #24E917; }
 
 .location-section {
   background-image: url("../images/patterns/grey_wash_wall.png");
@@ -345,106 +337,43 @@ input[type="button"] {
 
 .playground-reviews-section {
   background-image: url("../images/patterns/debut_light.png"); }
-
-.review {
-  position: relative;
-  padding: 20px 0; }
-  .review .date {
-    width: 65px;
-    height: 100%;
-    position: absolute;
-    border-right: 1px solid #00aaff; }
-    .review .date > div {
-      font-size: 12px;
+  .playground-reviews-section .review {
+    position: relative;
+    padding: 20px 0; }
+    .playground-reviews-section .review .date {
+      width: 65px;
+      height: 100%;
       position: absolute;
-      display: inline-block;
-      text-align: center;
-      padding: 2px 4px; }
-      .review .date > div:after {
-        font-family: 'fontello';
-        font-size: 9px;
-        line-height: 9px;
+      border-right: 1px solid #00aaff; }
+      .playground-reviews-section .review .date > div {
+        font-size: 12px;
         position: absolute;
-        right: -9px;
-        top: 10px;
-        color: #ffffff;
-        padding: 4px;
-        border-radius: 10px; }
-    .review .date > div.positive:after {
-      content: "\e867";
-      background-color: #228022; }
-    .review .date > div.negative:after {
-      content: "\e868";
-      background-color: darkred; }
-  .review .message, .review .reviewer {
-    padding-left: 85px;
-    font-style: italic;
-    font-size: 14px; }
-  .review .reviewer {
-    text-align: right; }
-    .review .reviewer:before {
-      content: "-"; }
-
-.legend {
-  width: 300px;
-  padding: 20px 0;
-  float: left;
-  text-align: left;
-  border-right: 5px solid #EFEFEF;
-  box-sizing: border-box; }
-  .legend .item {
-    display: inline-block;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 10px;
-    width: 100%;
-    border-bottom: 1px solid #EFEFEF; }
-    .legend .item:nth-child(1) {
-      border-top: 1px solid #EFEFEF; }
-    .legend .item.selected {
-      background-color: #EFEFEF; }
-    .legend .item .category {
-      font-size: 12px;
-      color: #00aaff; }
-      .legend .item .category:before {
-        font-family: "fontello";
-        content: '\e827';
-        padding: 0 5px 0 0; }
-
-.legend-details {
-  box-sizing: border-box;
-  width: 600px;
-  float: right; }
-  .legend-details .more-info {
-    font-size: 14px;
-    display: inline-block;
-    width: 100%; }
-    .legend-details .more-info span {
-      display: inline-block;
-      box-sizing: border-box;
-      margin: 0 0 30px 20px;
-      padding: 7px;
-      width: 70%; }
-    .legend-details .more-info input[type="button"] {
-      float: right;
-      margin: 0; }
-  .legend-details #timingsWidget {
-    width: 100%;
-    height: 500px;
-    font-size: 14px;
-    box-sizing: border-box;
-    padding-top: 10px; }
-    .legend-details #timingsWidget .time {
-      font-size: 11px; }
-    .legend-details #timingsWidget .timeTick {
-      stroke-width: 2px;
-      stroke: #ffd21f; }
-    .legend-details #timingsWidget .dayLines {
-      stroke-width: 1px;
-      shape-rendering: crispEdges;
-      stroke: #24E917; }
-    .legend-details #timingsWidget .slotName {
-      fill: #24E917; }
+        display: inline-block;
+        text-align: center;
+        padding: 2px 4px; }
+        .playground-reviews-section .review .date > div:after {
+          font-family: 'fontello';
+          font-size: 9px;
+          line-height: 9px;
+          position: absolute;
+          right: -9px;
+          top: 10px;
+          color: #ffffff;
+          padding: 4px;
+          border-radius: 10px; }
+      .playground-reviews-section .review .date > div.positive:after {
+        content: "\e867";
+        background-color: #228022; }
+      .playground-reviews-section .review .date > div.negative:after {
+        content: "\e868";
+        background-color: darkred; }
+    .playground-reviews-section .review .message, .playground-reviews-section .review .reviewer {
+      padding-left: 85px;
+      font-style: italic;
+      font-size: 14px; }
+    .playground-reviews-section .review .reviewer {
+      text-align: right; }
+      .playground-reviews-section .review .reviewer:before {
+        content: "-"; }
 
 /*# sourceMappingURL=detail2.css.map */
