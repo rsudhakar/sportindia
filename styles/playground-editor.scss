@@ -1,4 +1,4 @@
-@import 'common';
+@import 'playground2';
 
 input[type="text"], textarea {  
     background-color: transparent;
@@ -21,7 +21,7 @@ textarea {
 
 
 .hide {
-    visibility: hidden;
+    display: none;
 }
 
 .editor-note {
@@ -29,11 +29,71 @@ textarea {
     font-style: italic;
 }
 
+.cropFrame {
+    margin: auto;
+
+    .cropControls {
+        background: none;
+        width: 50px;
+        height: 28px;
+        margin: auto;
+        display: block;
+        position: relative;
+
+        .cropImageSelector {
+            position: relative;
+            float: right;
+            width: 23px;
+            margin: 2px 2px 0 0;
+            font-size: 14px;
+            border-radius: 4px;
+
+            input[type="file"] {
+                opacity: 0;
+                z-index: 2;
+                cursor: pointer;
+                width: 25px;
+            }
+            i {
+                position: absolute;
+                pointer-events: none;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 2px;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }    
+    }
+}
 
 .page-banner-section {
+    &:before {
+        background: none;
+    }
+
+    & > .cropFrame {        
+        margin: auto;
+
+        .cropControls {
+            margin-top: 140px;
+            width: 75px;
+        }
+    }
+
+    .icon {
+        border: 1px dashed black;
+        vertical-align: bottom;
+
+        img {
+            max-width: none;
+        }
+    }
+
     .options {
         width: 75px;
-    }
+    }    
 }
 
 .playground-details-section {

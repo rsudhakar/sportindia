@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="styles/playground2.css"/>
     <link rel="stylesheet" href="styles/playground-editor.css"/>
     <link rel="stylesheet" href="fontello/css/fontello.css"/>
+    <link rel="stylesheet" href="styles/jquery.cropbox.css"/>
 
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script src="scripts/lib/jquery.min.js"></script>
     <script src="scripts/lib/lodash.min.js"></script>
     <script src="scripts/lib/d3.min.js"></script>
     <script src="scripts/lib/skrollr.min.js"></script>
+    <script src="scripts/lib/jquery.cropbox.js"></script>
 
     <script src="scripts/locationMap.js"></script>
     <script src="scripts/slotsWidget2.js"></script>
+    <script src="scripts/imagePicker.js"></script>
     <script src="scripts/playground-editor.js"></script>
 
 </head>
@@ -39,6 +42,7 @@
 
 
     <div class="section page-banner-section">
+        <img class="banner-image" src="../images/image-placeholder.png"/>
         <div class="options">
             <div>
                 <label>
@@ -62,24 +66,12 @@
         <div class="wrapper">
             <div class="content">
                 <div class="heading playground-name">
-                    <div class="tennis-icon"></div>
+                    <div class="icon">
+                        <img src='../images/logo-placeholder.png'/>
+                    </div>
                     <div id="entity-heading" class="name">
-                        <input type="text" class="mandatory" placeholder="Entity Name"></input>
-                        
-                        <div class="details hide">
-                            <span>&nbsp;</span>
-                        </div>
-                    </div>
-                    <div class="rating hide">
-                        <span>
-                            <i class="positive icon-emo-happy"></i>
-                            <div>&nbsp;</div>
-                        </span>
-                        <span>
-                            <i class="negative icon-emo-unhappy"></i>
-                            <div>&nbsp;</div>
-                        </span>
-                    </div>
+                        <input type="text" class="mandatory" placeholder="Entity Name"></input>                        
+                    </div>                
                 </div>
             </div>    
         </div>
@@ -109,8 +101,9 @@
                         <td class="big">
                             <div class="info-tag">
                                 <i class="icon-columns"></i>
-                                <input type="text" class="mandatory" name="courts" placeholder="?"></input> Court(s)
+                                <input type="text" class="mandatory medium" name="courts" placeholder="?"></input> Court(s)
                             </div>
+                            <br/>
                             <div class="info-tag">
                                 <i class="icon-th"></i>
                                 <input type="text" class="medium" name="surface" placeholder="?"></input> Surface

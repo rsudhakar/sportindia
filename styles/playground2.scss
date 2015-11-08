@@ -88,12 +88,14 @@ input[type="button"] {
     left: 0;
   }
 
-  .tennis-icon {
-    background-image: url('../images/racket1.png');
-    background-size: 50px 50px;
+  .icon {
     width: 50px;
     height: 50px;
     display: inline-block;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   .name {
@@ -135,8 +137,9 @@ input[type="button"] {
   }
 
   .options {
-    position: relative;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     margin: 82px 40px;
     width: 42px;
 

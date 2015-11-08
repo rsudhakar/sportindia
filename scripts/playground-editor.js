@@ -1,10 +1,25 @@
-function initEventMap() {
+function initMapEditor() {
     var locationMap = new LocationMap('#location-map');
     locationMap.setCenter(13.000572, 80.204036);
     locationMap.centerToCurrentLocation();
     var searchBox = $("#location-map-input")[0];
     locationMap.showSearchBox(searchBox);
     locationMap.addMarkerOnClick();
+}
+
+function initImageEditors() {
+    initImagePicker(".banner-image", {
+      width: $(window).width(),
+      height: 400,
+      label: ""
+    });
+
+    initImagePicker(".icon img", {
+      width: 50,
+      height: 50,
+      label: "",
+      zoom: 20
+    });
 }
 
 function initTimings() {
@@ -22,18 +37,11 @@ function initTimings() {
   timingsWidget.show("Special classes - batch 1");
 }
 
-function initGallery() {
-    lightbox.option({
-        'resizeDuration': 200,
-        'wrapAround': true
-    });
-}
-
 
 function init() {
-    initEventMap();
+    initMapEditor();
+    initImageEditors();
     initTimings();
-    initGallery();
     skrollr.init();
 }
 
