@@ -1,16 +1,6 @@
 @import 'common';
 
 
-@mixin dark-bg {
-  background-image: url("../images/patterns/grey_wash_wall.png");
-  color: white;
-
-  .heading {
-    color: white;
-    border-bottom-color: $color-logo-yellow;
-  }
-}
-
 .site-header {
   background-color: rgba(0, 0, 0, 0.75);
 
@@ -45,29 +35,6 @@ input[type="button"] {
   margin: 5px;
   color: black;
   background-color: $color-logo-yellow;
-}
-
-.section {
-  padding: 30px 0;
-  border-bottom: none;
-  display: inline-block;
-  width: 100%;
-
-  .half {
-    width: 50%;
-  }
-
-  .heading {
-    font-size: 26px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid $color-logo-blue;
-    width: 100%;
-    .details {
-      font-size: 14px;
-      padding-top: 5px;
-    }
-  }
 }
 
 .page-banner-section {

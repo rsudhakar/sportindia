@@ -62,8 +62,20 @@ a {
 
 .section {
   background-color: #EFEFEF;
-  border-bottom: 2px solid #bfbfbf;
-  padding: 30px 0; }
+  padding: 30px 0;
+  display: inline-block;
+  width: 100%; }
+  .section .half {
+    width: 50%; }
+  .section .heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00aaff;
+    width: 100%; }
+    .section .heading .details {
+      font-size: 14px;
+      padding-top: 5px; }
   .section .content {
     width: 900px;
     margin: auto; }

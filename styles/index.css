@@ -62,8 +62,20 @@ a {
 
 .section {
   background-color: #EFEFEF;
-  border-bottom: 2px solid #bfbfbf;
-  padding: 30px 0; }
+  padding: 30px 0;
+  display: inline-block;
+  width: 100%; }
+  .section .half {
+    width: 50%; }
+  .section .heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00aaff;
+    width: 100%; }
+    .section .heading .details {
+      font-size: 14px;
+      padding-top: 5px; }
   .section .content {
     width: 900px;
     margin: auto; }
@@ -128,10 +140,6 @@ a {
     top: 330px;
     background-color: rgba(0, 0, 0, 0.5); }
 
-.section.upcoming-events {
-  border-bottom: none;
-  padding-bottom: 0px; }
-
 .controls {
   padding: 5px;
   margin: 10px;
@@ -180,47 +188,74 @@ a {
   .event-timeline-details .info {
     font-size: 12px; }
 
-.featured {
-  margin-top: 20px; }
-  .featured .tile {
-    width: 290px;
-    box-sizing: border-box;
-    background-color: white;
-    border: 1px solid #bfbfbf;
-    border-radius: 6px;
-    margin: 5px 0;
-    display: inline-block; }
-    .featured .tile .date {
-      position: absolute;
-      width: 140px;
-      height: 50px;
-      top: 12px;
-      left: -34px;
-      text-align: center;
-      padding: 12px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #00aaff;
+.featured-section {
+  background-image: url("../images/patterns/grey_wash_wall.png");
+  color: white; }
+  .featured-section .heading {
+    color: white;
+    border-bottom-color: #ffd21f; }
+  .featured-section .filters {
+    float: right;
+    margin-top: 10px;
+    font-size: 16px; }
+    .featured-section .filters span {
+      margin: 0 10px;
+      display: inline-block; }
+      .featured-section .filters span.selected {
+        color: #ffd21f;
+        border-bottom: 1px solid white; }
+  .featured-section .featured {
+    margin-top: 20px; }
+    .featured-section .featured .tile {
+      width: 290px;
       box-sizing: border-box;
-      background-image: url("../images/side-band.png");
-      background-repeat: no-repeat;
-      transform: rotate(-45deg); }
-    .featured .tile img {
-      width: 100%;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px; }
-    .featured .tile .info {
-      padding: 15px; }
-      .featured .tile .info .heading {
-        font-size: 18px;
+      background-color: white;
+      border: 1px solid #bfbfbf;
+      border-radius: 6px;
+      margin: 5px 0;
+      display: inline-block; }
+      .featured-section .featured .tile .date {
+        position: absolute;
+        width: 140px;
+        height: 50px;
+        top: 12px;
+        left: -34px;
+        text-align: center;
+        padding: 12px;
+        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 15px;
-        color: #333333; }
-      .featured .tile .info .details {
-        font-size: 15px;
-        color: #535353;
-        line-height: 18px;
-        letter-spacing: 0;
-        color: #696868; }
+        color: #00aaff;
+        box-sizing: border-box;
+        background-image: url("../images/side-band.png");
+        background-repeat: no-repeat;
+        transform: rotate(-45deg); }
+      .featured-section .featured .tile img {
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px; }
+      .featured-section .featured .tile .info {
+        padding: 5px 10px; }
+        .featured-section .featured .tile .info .title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: #333333; }
+        .featured-section .featured .tile .info .details {
+          font-size: 15px;
+          color: #535353;
+          line-height: 18px;
+          letter-spacing: 0;
+          color: #696868; }
+      .featured-section .featured .tile.event {
+        background-image: url("../images/patterns/diagmonds.png");
+        border: 1px solid black; }
+        .featured-section .featured .tile.event .title {
+          color: #D7D5D5; }
+      .featured-section .featured .tile.playground {
+        background-image: url("../images/patterns/green_cup.png");
+        border: 5px solid #9DA38D; }
+      .featured-section .featured .tile.training-club {
+        background-image: url("../images/patterns/swirl_pattern.png");
+        border: 5px solid white; }
 
 /*# sourceMappingURL=index.css.map */

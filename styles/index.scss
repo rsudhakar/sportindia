@@ -95,13 +95,6 @@
   }
 }
 
-.section {
-  &.upcoming-events {
-    border-bottom: none;
-    padding-bottom: 0px;
-  }
-}
-
 .controls {
   padding: 5px;
   margin: 10px;
@@ -172,58 +165,100 @@
   }
 }
 
-.featured {
-  margin-top: 20px;
+.featured-section {
+  @include dark-bg();
 
-  .tile {
-    width: 290px;
-    box-sizing: border-box;
-    background-color: white;
-    border: 1px solid $color-darkgray;
-    border-radius: 6px;
-    margin: 5px 0;
-    display: inline-block;
+  .filters {
+    float: right;
+    margin-top: 10px;
+    font-size: 16px;
 
-    .date {
-      position: absolute;
-      width: 140px;
-      height: 50px;
-      top: 12px;
-      left: -34px;
-      text-align: center;
-      padding: 12px;
-      font-size: 20px;
-      font-weight: bold;
-      color: $color-logo-blue;
+    span {
+      margin: 0 10px;
+      display: inline-block;
+      
+      &.selected {
+        color: $color-logo-yellow;
+        border-bottom: 1px solid white;
+      }
+    }
+
+  }
+
+  .featured {
+    margin-top: 20px;
+
+    .tile {
+      width: 290px;
       box-sizing: border-box;
-      background-image: url("../images/side-band.png");
-      background-repeat: no-repeat;
-      transform: rotate(-45deg);
-    }
+      background-color: white;
+      border: 1px solid $color-darkgray;
+      border-radius: 6px;
+      margin: 5px 0;
+      display: inline-block;
 
-    img {
-      width: 100%;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
-    }
-
-    .info {
-      padding: 15px;
-
-      .heading {
-        font-size: 18px;
+      .date {
+        position: absolute;
+        width: 140px;
+        height: 50px;
+        top: 12px;
+        left: -34px;
+        text-align: center;
+        padding: 12px;
+        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 15px;
-        color: #333333;
+        color: $color-logo-blue;
+        box-sizing: border-box;
+        background-image: url("../images/side-band.png");
+        background-repeat: no-repeat;
+        transform: rotate(-45deg);
       }
 
-      .details {
-        font-size: 15px;
-        color: #535353;
-        line-height: 18px;
-        letter-spacing: 0;
-        color: #696868;
+      img {
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+
+      .info {
+        padding: 5px 10px;
+
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: #333333;
+        }
+
+        .details {
+          font-size: 15px;
+          color: #535353;
+          line-height: 18px;
+          letter-spacing: 0;
+          color: #696868;
+        }
+      }
+
+      &.event {
+        background-image: url("../images/patterns/diagmonds.png");
+        border: 1px solid black;
+
+        .title {
+          color: #D7D5D5;
+        }
+      }
+
+      &.playground {
+        background-image: url("../images/patterns/green_cup.png");
+        border: 5px solid #9DA38D;
+      }
+
+      &.training-club {
+        background-image: url("../images/patterns/swirl_pattern.png");
+        border: 5px solid white;
       }
     }
   }
 }
+
+

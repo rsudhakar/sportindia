@@ -32,11 +32,11 @@ function initMap() {
 
 function initEventTimeline() {
     var sampleData = [
-        {name: "Event 1", date: moment("2015-10-5").toDate(), description: "Description of the event"},
-        {name: "Event 1", date: moment("2015-10-6").toDate(), description: "Description of the event"},
-        {name: "Event 1", date: moment("2015-10-10").toDate(), description: "Description of the event"},
-        {name: "Event 2", date: moment("2015-11-5").toDate(), description: "Description of the event"},
-        {name: "Event 3", date: moment("2015-12-15").toDate(), description: "Description of the event"}
+        {name: "Event 1", date: moment("2015-10-5","YYYY-MM-DD").toDate(), description: "Description of the event"},
+        {name: "Event 1", date: moment("2015-10-6","YYYY-MM-DD").toDate(), description: "Description of the event"},
+        {name: "Event 1", date: moment("2015-10-10","YYYY-MM-DD").toDate(), description: "Description of the event"},
+        {name: "Event 2", date: moment("2015-11-5","YYYY-MM-DD").toDate(), description: "Description of the event"},
+        {name: "Event 3", date: moment("2015-12-15","YYYY-MM-DD").toDate(), description: "Description of the event"}
     ];
     var timelineWidget = new TimelineWidget(".event-timeline");
     timelineWidget.render(sampleData);
