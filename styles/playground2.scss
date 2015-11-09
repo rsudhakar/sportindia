@@ -437,14 +437,14 @@ input[type="button"] {
 
       > div.positive {
         &:after {
-          content: "\e867";
+          content: "\e850";
           background-color: $color-positive;
         }
       }
 
       > div.negative {
         &:after {
-          content: "\e868";
+          content: "\e851";
           background-color: $color-negative;
         }
       }

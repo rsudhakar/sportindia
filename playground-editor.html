@@ -21,7 +21,7 @@
 
     <script src="scripts/locationMap.js"></script>
     <script src="scripts/slotsWidget2.js"></script>
-    <script src="scripts/imagePicker.js"></script>
+    <script src="scripts/imageUtils.js"></script>
     <script src="scripts/playground-editor.js"></script>
 
 </head>
@@ -209,23 +209,14 @@
         <div class="heading">
             Photos
         </div>
-        <div class="details photos">
-            <a href="temp/court1.jpg" data-lightbox="playground">
-                <img src="temp/court1.jpg" alt="First image" />
-            </a>
-            <a href="temp/court2.jpg" data-lightbox="playground">
-                <img src="temp/court2.jpg" alt="First image" />
-            </a>
-            <a href="temp/court3.jpg" data-lightbox="playground">
-                <img src="temp/court3.jpg" alt="First image" />
-            </a>
-            <a href="temp/court4.jpg" data-lightbox="playground">
-                <img src="temp/court4.jpg" alt="First image" />
-            </a>
-            <a href="temp/court5.jpg" data-lightbox="playground">
-                <img src="temp/court5.jpg" alt="First image" />
-            </a>
+        
+        <div class="details photos">            
+            <div class="gallery-files-selector">
+                <input type="file" class="gallery-files" name="galleryImages" multiple></input>
+                <span><i class="icon-plus-squared">Add</i></span>
+            </div>
         </div>        
+        <canvas id="image-resizing-canvas"></canvas>
     </div>
 </div>
 

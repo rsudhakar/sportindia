@@ -37,11 +37,16 @@ function initTimings() {
   timingsWidget.show("Special classes - batch 1");
 }
 
+function initGallery() {
+  initGalleryPreview();
+}
+
 
 function init() {
     initMapEditor();
     initImageEditors();
     initTimings();
+    initGallery();
     skrollr.init();
 }
 

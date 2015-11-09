@@ -366,10 +366,10 @@ input[type="button"] {
           padding: 4px;
           border-radius: 10px; }
       .playground-reviews-section .review .date > div.positive:after {
-        content: "\e867";
+        content: "\e850";
         background-color: #228022; }
       .playground-reviews-section .review .date > div.negative:after {
-        content: "\e868";
+        content: "\e851";
         background-color: darkred; }
     .playground-reviews-section .review .message, .playground-reviews-section .review .reviewer {
       padding-left: 85px;

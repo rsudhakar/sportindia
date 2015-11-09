@@ -366,10 +366,10 @@ input[type="button"] {
           padding: 4px;
           border-radius: 10px; }
       .playground-reviews-section .review .date > div.positive:after {
-        content: "\e867";
+        content: "\e850";
         background-color: #228022; }
       .playground-reviews-section .review .date > div.negative:after {
-        content: "\e868";
+        content: "\e851";
         background-color: darkred; }
     .playground-reviews-section .review .message, .playground-reviews-section .review .reviewer {
       padding-left: 85px;
@@ -464,5 +464,40 @@ textarea {
   margin: 5px;
   color: black;
   width: 50%; }
+
+.playground-photos-section #image-resizing-canvas {
+  visibility: hidden; }
+.playground-photos-section .photos .new-image {
+  position: relative;
+  display: inline-block;
+  width: 290px;
+  margin: 0 3px; }
+  .playground-photos-section .photos .new-image img {
+    width: 100%; }
+  .playground-photos-section .photos .new-image input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 4px 0;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: black; }
+.playground-photos-section .gallery-files-selector {
+  position: relative;
+  width: 50px;
+  margin: 10px auto;
+  font-size: 14px;
+  border-radius: 4px; }
+  .playground-photos-section .gallery-files-selector input[type="file"] {
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px; }
+  .playground-photos-section .gallery-files-selector span {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: 1; }
 
 /*# sourceMappingURL=playground-editor.css.map */
