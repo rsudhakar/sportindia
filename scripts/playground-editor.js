@@ -51,3 +51,21 @@ function init() {
 }
 
 google.maps.event.addDomListener(window, 'load', init);
+
+function getSelectedBannerImage() {
+  $(".banner-image").data("cropbox").getDataURL();
+}
+
+function getSelectedIcon() {
+  $(".icon img").data("cropbox").getDataURL();
+}
+
+function getSelectedGallaryImages() {
+  var imagesData = [];
+  var images = $(".playground-photos-section .photos img");
+  var captions = $(".playground-photos-section .photos input[type='text']");
+  for(var i=0; i < images.size(); i++) {
+    imagesData.push({image: $(images[i]).attr("src"), caption: $(captions[i]).val()})
+  }
+  return imagesData;
+}
