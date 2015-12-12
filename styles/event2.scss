@@ -1,0 +1,408 @@
+@import 'common';
+
+
+.site-header {
+  background-color: rgba(0, 0, 0, 0.75);
+
+  .entity-name {
+    color: white;
+    padding-left: 5px;
+    display:none;
+  }
+
+  .entity-links {
+    color: #FFF;
+    font-size: 13px;
+    display: none;
+    border-top: 1px solid black;
+
+    >span {
+      float: right;
+      >span {
+        display: inline-block;
+        padding: 5px 5px 3px 5px;
+        margin-bottom: 2px;
+        &.selected {
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+}
+
+input[type="button"] {
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  background-color: $color-logo-yellow;
+}
+
+.sub.section {
+  padding: 15px 0;
+
+  .heading {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px dashed $color-logo-blue;
+    width: 50%;
+  }
+}
+
+.page-banner-section {
+  position: relative;
+  display: block;
+  height: 400px;
+  padding: 0;
+
+  &:before {
+    content: "";
+    background: url('../temp/shuttle1.JPG') no-repeat center center;
+    background-size: 100%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .category {
+    span {
+      border: 1px solid $color-logo-blue;
+      padding: 5px;
+    }
+  }
+
+  input[type=button] {
+    background-color: $color-logo-blue;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+  }
+
+  .name {
+    width: 100%
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 36px;
+    vertical-align: top;
+    padding: 40px;
+    text-align: center;
+
+    .sub-title {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    .details {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+  }
+
+  .wrapper {
+    position: absolute;
+    bottom: 130px;
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;  
+    color: white;
+    padding: 20px 0;
+  }
+
+  .sponsor {  
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(160, 156, 155);
+    height: 60px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+
+  .header {
+    width: 50%;
+  }
+
+  .options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 82px 40px;
+    width: 42px;
+
+    i {
+      font-size: 30px;
+      border-radius: 50px;
+      background-color: rgba(255,255,255,0.4);
+      line-height: 46px;
+    }
+  }
+
+  .playground-name {
+    border-bottom: none;
+    margin-bottom: 0;
+    text-align: center;
+
+    .name {
+      font-weight: bold;
+      font-size: 34px;
+      display: inline-block;
+      max-width: 90%;
+
+      .details {
+        font-weight: normal;
+        .name {
+          font-size: 16px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .rating {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 26px 10px;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+
+      span {      
+        display: inline-block;
+        padding: 0 5px;
+
+        i {
+          padding: 5px;
+          border-radius: 15px;
+
+          &.positive {
+            color: $color-positive;
+            border: 2px solid $color-positive;
+          }
+          &.negative {
+            color: $color-negative;
+            border: 2px solid $color-negative;
+          }
+        }
+
+        div {
+          display: block;
+          text-align: center;
+          padding-top: 7px;
+          font-size: 14px;
+        }
+      }  
+    }
+  }
+}
+
+.event-gist-section {
+  background-color: white;
+
+  .category {
+    text-align: center;
+    span {
+      padding: 0 10px;
+      border-left: 1px solid $color-logo-blue;
+    }
+    span:last-child {
+     border-right: 1px solid $color-logo-blue; 
+    }
+  }
+
+  .location {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+
+.playground-links-section {
+  background-color: white;
+  padding: 10px 0;
+
+  .links {
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+
+    span {
+      padding: 0 5px;
+
+      &.selected {
+        border-bottom: 3px solid $color-logo-blue;
+      }
+    }
+  }
+}
+
+.playground-details-section {
+  background-image: url("../images/patterns/crossword.png");
+  padding-top: 50px;
+  font-size: 14px;
+
+  .playground-info {
+    padding-bottom: 30px;
+  }
+
+  .court-info {
+    width: 100%;
+
+    td.title {
+      width: 150px;
+    }
+
+    td {
+      padding: 5px;
+      >div {
+        box-sizing: border-box;
+      }
+    }
+    .segment {
+      width: 100px;
+    }
+
+    .info-tag {
+      display: inline-block;
+      padding: 5px;
+      margin-right: 10px;
+      vertical-align: top;
+
+      i {
+        color: $color-logo-blue;
+      }
+    }
+
+    .big {
+      .info-tag {
+        min-width: 230px;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .photos {
+    padding-top: 30px;
+    text-align: center;
+
+    a img {
+      height: 75px;
+    }
+  }  
+
+}
+
+.location-section {
+  background-image: url("../images/patterns/crossword.png");
+
+  #location-map {
+    display: inline-block;
+    width: 70%;
+    height: 400px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 30%;
+    height: 400px;
+    float: right;
+    font-size: 16px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.playground-photos-section {
+  @include dark-bg();
+
+}
+
+.playground-reviews-section {
+  background-image: url("../images/patterns/debut_light.png");
+
+  .review {
+    position: relative;
+    padding: 20px 0;
+
+    .date {
+      width: 65px;
+      height: 100%;
+      position: absolute;
+      border-right: 1px solid $color-logo-blue;
+
+      > div {
+        font-size: 12px;
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        padding: 2px 4px;
+
+        &:after {
+          font-family: 'fontello';
+          font-size: 9px;
+          line-height: 9px;
+          position: absolute;
+          right: -9px;
+          top: 10px;
+          color: #ffffff;
+          padding: 4px;
+          border-radius: 10px;
+        }
+      }
+
+      > div.positive {
+        &:after {
+          content: "\e850";
+          background-color: $color-positive;
+        }
+      }
+
+      > div.negative {
+        &:after {
+          content: "\e851";
+          background-color: $color-negative;
+        }
+      }
+    }
+
+    .message, .reviewer {
+      padding-left: 85px;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    .reviewer {
+      &:before {
+        content: "-"
+      }
+
+      text-align: right;
+    }
+  }
+}
+
+
+

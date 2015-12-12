@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "chosen";
+  src: url("../fonts/OpenSans-Regular.ttf"); }
+
+@font-face {
+  font-family: "improved";
+  src: url("../fonts/Quicksand-Regular.otf"); }
+
+body {
+  background-color: #efefef;
+  font-family: chosen; }
+
+input[type="button"] {
+  border: 1px solid #bfbfbf;
+  border-radius: 4px; }
+
+.site-label {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 0; }
+
+.sitename {
+  font-family: sans-serif;
+  display: inline-block;
+  color: #00aaff; }
+  .sitename span {
+    color: #ffd21f; }
+
+li {
+  padding: 4px 0; }
+
+a {
+  text-decoration: none; }
+
+.site-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .site-header .content {
+    width: 900px;
+    margin: 0 auto; }
+    .site-header .content .games {
+      display: inline-block;
+      color: #ffffff; }
+      .site-header .content .games > div {
+        display: inline-block;
+        padding: 10px; }
+      .site-header .content .games > div.selected {
+        background-color: #efefef;
+        font-weight: bold;
+        color: #000000; }
+    .site-header .content .login {
+      float: right;
+      display: inline-block;
+      padding: 10px; }
+
+.container {
+  position: relative; }
+
+.section {
+  background-color: #efefef;
+  padding: 30px 0;
+  display: inline-block;
+  width: 100%; }
+  .section .half {
+    width: 50%; }
+  .section .heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00aaff;
+    width: 100%; }
+    .section .heading .details {
+      font-size: 14px;
+      padding-top: 5px; }
+  .section .content {
+    width: 900px;
+    margin: auto; }
+
+.site-header {
+  background-color: rgba(0, 0, 0, 0.75); }
+  .site-header .entity-name {
+    color: white;
+    padding-left: 5px;
+    display: none; }
+  .site-header .entity-links {
+    color: #FFF;
+    font-size: 13px;
+    display: none;
+    border-top: 1px solid black; }
+    .site-header .entity-links > span {
+      float: right; }
+      .site-header .entity-links > span > span {
+        display: inline-block;
+        padding: 5px 5px 3px 5px;
+        margin-bottom: 2px; }
+        .site-header .entity-links > span > span.selected {
+          border-bottom: 1px solid white; }
+
+input[type="button"] {
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  background-color: #ffd21f; }
+
+.sub.section {
+  padding: 15px 0; }
+  .sub.section .heading {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px dashed #00aaff;
+    width: 50%; }
+
+.page-banner-section {
+  position: relative;
+  display: block;
+  height: 400px;
+  padding: 0; }
+  .page-banner-section:before {
+    content: "";
+    background: url("../temp/shuttle1.JPG") no-repeat center center;
+    background-size: 100%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .page-banner-section .icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block; }
+    .page-banner-section .icon img {
+      max-width: 100%; }
+  .page-banner-section .category span {
+    border: 1px solid #00aaff;
+    padding: 5px; }
+  .page-banner-section input[type=button] {
+    background-color: #00aaff;
+    padding: 5px 10px;
+    color: white;
+    border: none; }
+  .page-banner-section .name {
+    width: 100%; }
+  .page-banner-section .content {
+    position: relative;
+    height: 100%; }
+  .page-banner-section .title {
+    display: inline-block;
+    font-size: 36px;
+    vertical-align: top;
+    padding: 40px;
+    text-align: center; }
+    .page-banner-section .title .sub-title {
+      font-size: 18px;
+      padding-top: 10px; }
+    .page-banner-section .title .details {
+      font-size: 16px;
+      padding-top: 15px; }
+  .page-banner-section .wrapper {
+    position: absolute;
+    bottom: 130px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    color: white;
+    padding: 20px 0; }
+  .page-banner-section .sponsor {
+    position: absolute;
+    bottom: 0;
+    background-color: #a09c9b;
+    height: 60px;
+    overflow: hidden;
+    width: 100%; }
+  .page-banner-section .header {
+    width: 50%; }
+  .page-banner-section .options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 82px 40px;
+    width: 42px; }
+    .page-banner-section .options i {
+      font-size: 30px;
+      border-radius: 50px;
+      background-color: rgba(255, 255, 255, 0.4);
+      line-height: 46px; }
+  .page-banner-section .playground-name {
+    border-bottom: none;
+    margin-bottom: 0;
+    text-align: center; }
+    .page-banner-section .playground-name .name {
+      font-weight: bold;
+      font-size: 34px;
+      display: inline-block;
+      max-width: 90%; }
+      .page-banner-section .playground-name .name .details {
+        font-weight: normal; }
+        .page-banner-section .playground-name .name .details .name {
+          font-size: 16px;
+          display: inline-block; }
+    .page-banner-section .playground-name .rating {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 26px 10px;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold; }
+      .page-banner-section .playground-name .rating span {
+        display: inline-block;
+        padding: 0 5px; }
+        .page-banner-section .playground-name .rating span i {
+          padding: 5px;
+          border-radius: 15px; }
+          .page-banner-section .playground-name .rating span i.positive {
+            color: #228022;
+            border: 2px solid #228022; }
+          .page-banner-section .playground-name .rating span i.negative {
+            color: darkred;
+            border: 2px solid darkred; }
+        .page-banner-section .playground-name .rating span div {
+          display: block;
+          text-align: center;
+          padding-top: 7px;
+          font-size: 14px; }
+
+.event-gist-section {
+  background-color: white; }
+  .event-gist-section .category {
+    text-align: center; }
+    .event-gist-section .category span {
+      padding: 0 10px;
+      border-left: 1px solid #00aaff; }
+    .event-gist-section .category span:last-child {
+      border-right: 1px solid #00aaff; }
+  .event-gist-section .location {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bold; }
+
+.playground-links-section {
+  background-color: white;
+  padding: 10px 0; }
+  .playground-links-section .links {
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold; }
+    .playground-links-section .links span {
+      padding: 0 5px; }
+      .playground-links-section .links span.selected {
+        border-bottom: 3px solid #00aaff; }
+
+.playground-details-section {
+  background-image: url("../images/patterns/crossword.png");
+  padding-top: 50px;
+  font-size: 14px; }
+  .playground-details-section .playground-info {
+    padding-bottom: 30px; }
+  .playground-details-section .court-info {
+    width: 100%; }
+    .playground-details-section .court-info td.title {
+      width: 150px; }
+    .playground-details-section .court-info td {
+      padding: 5px; }
+      .playground-details-section .court-info td > div {
+        box-sizing: border-box; }
+    .playground-details-section .court-info .segment {
+      width: 100px; }
+    .playground-details-section .court-info .info-tag {
+      display: inline-block;
+      padding: 5px;
+      margin-right: 10px;
+      vertical-align: top; }
+      .playground-details-section .court-info .info-tag i {
+        color: #00aaff; }
+    .playground-details-section .court-info .big .info-tag {
+      min-width: 230px;
+      box-sizing: border-box;
+      font-size: 20px; }
+  .playground-details-section .photos {
+    padding-top: 30px;
+    text-align: center; }
+    .playground-details-section .photos a img {
+      height: 75px; }
+
+.location-section {
+  background-image: url("../images/patterns/crossword.png"); }
+  .location-section #location-map {
+    display: inline-block;
+    width: 70%;
+    height: 400px; }
+  .location-section .address {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 30%;
+    height: 400px;
+    float: right;
+    font-size: 16px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+
+.playground-photos-section {
+  background-image: url("../images/patterns/grey_wash_wall.png");
+  color: white; }
+  .playground-photos-section .heading {
+    color: white;
+    border-bottom-color: #ffd21f; }
+
+.playground-reviews-section {
+  background-image: url("../images/patterns/debut_light.png"); }
+  .playground-reviews-section .review {
+    position: relative;
+    padding: 20px 0; }
+    .playground-reviews-section .review .date {
+      width: 65px;
+      height: 100%;
+      position: absolute;
+      border-right: 1px solid #00aaff; }
+      .playground-reviews-section .review .date > div {
+        font-size: 12px;
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        padding: 2px 4px; }
+        .playground-reviews-section .review .date > div:after {
+          font-family: 'fontello';
+          font-size: 9px;
+          line-height: 9px;
+          position: absolute;
+          right: -9px;
+          top: 10px;
+          color: #ffffff;
+          padding: 4px;
+          border-radius: 10px; }
+      .playground-reviews-section .review .date > div.positive:after {
+        content: "\e850";
+        background-color: #228022; }
+      .playground-reviews-section .review .date > div.negative:after {
+        content: "\e851";
+        background-color: darkred; }
+    .playground-reviews-section .review .message, .playground-reviews-section .review .reviewer {
+      padding-left: 85px;
+      font-style: italic;
+      font-size: 14px; }
+    .playground-reviews-section .review .reviewer {
+      text-align: right; }
+      .playground-reviews-section .review .reviewer:before {
+        content: "-"; }
