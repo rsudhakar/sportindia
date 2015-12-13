@@ -354,3 +354,38 @@ input[type="button"] {
       text-align: right; }
       .playground-reviews-section .review .reviewer:before {
         content: "-"; }
+
+.register-section .step-number {
+  display: inline-block;
+  background-color: #00aaff;
+  border-radius: 22px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 12px; }
+.register-section .step-desc {
+  display: inline-block;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 18px; }
+.register-section .step-details {
+  font-size: 14px;
+  padding: 15px 0 15px 100px;
+  margin-left: 16px;
+  border-left: 2px solid black; }
+.register-section .row {
+  padding: 5px 0; }
+  .register-section .row.header {
+    font-weight: bold;
+    font-size: 15px; }
+  .register-section .row.payment-row {
+    display: inline-block; }
+    .register-section .row.payment-row div {
+      text-align: center; }
+    .register-section .row.payment-row .pay {
+      padding: 5px 20px;
+      margin-top: 10px; }
+  .register-section .row .col1, .register-section .row .col2, .register-section .row .col3 {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20%; }
