@@ -454,6 +454,18 @@ input[type="button"] {
       box-sizing: border-box;      
       width: 20%;
     }
+  }   
+}
+
+.alert-section {
+  background-color: $color-logo-yellow;
+  padding: 20px 0;
+
+  i,span {
+    vertical-align: middle;
   }
-    
+
+  i {
+    font-size: 32px;
+  }
 }

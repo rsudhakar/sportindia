@@ -389,3 +389,11 @@ input[type="button"] {
     display: inline-block;
     box-sizing: border-box;
     width: 20%; }
+
+.alert-section {
+  background-color: #ffd21f;
+  padding: 20px 0; }
+  .alert-section i, .alert-section span {
+    vertical-align: middle; }
+  .alert-section i {
+    font-size: 32px; }
