@@ -1,0 +1,474 @@
+@import 'common';
+
+
+.site-header {
+  background-color: rgba(0, 0, 0, 0.75);
+
+  .entity-name {
+    color: white;
+    padding-left: 5px;
+    display:none;
+  }
+
+  .entity-links {
+    color: #FFF;
+    font-size: 13px;
+    display: none;
+    border-top: 1px solid black;
+
+    >span {
+      float: right;
+      >span {
+        display: inline-block;
+        padding: 5px 5px 3px 5px;
+        margin-bottom: 2px;
+        &.selected {
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+}
+
+input[type="button"] {
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  background-color: $color-logo-yellow;
+}
+
+.page-banner-section {
+  position: relative;
+  display: block;
+  height: 400px;
+  padding: 0;
+
+  &:before {
+    content: "";
+    background: url('../images/chennai-rains1.jpg') no-repeat center center;
+    background-size: 100%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .name {
+    width: 100%
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 36px;
+    vertical-align: top;
+    padding: 40px;
+    text-align: center;
+
+    .sub-title {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    .details {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+  }
+
+  .wrapper {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+  }
+
+  .header {
+    width: 50%;
+  }
+
+  .options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 82px 40px;
+    width: 42px;
+
+    i {
+      font-size: 30px;
+      border-radius: 50px;
+      background-color: rgba(255,255,255,0.4);
+      line-height: 46px;
+    }
+  }
+
+  .playground-name {
+    border-bottom: none;
+    margin-bottom: 0;
+
+    .name {
+      font-weight: bold;
+      font-size: 34px;
+      display: inline-block;
+      max-width: 70%;
+
+      .details {
+        font-weight: normal;
+        .name {
+          font-size: 16px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .rating {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 26px 10px;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+
+      span {      
+        display: inline-block;
+        padding: 0 5px;
+
+        i {
+          padding: 5px;
+          border-radius: 15px;
+
+          &.positive {
+            color: $color-positive;
+            border: 2px solid $color-positive;
+          }
+          &.negative {
+            color: $color-negative;
+            border: 2px solid $color-negative;
+          }
+        }
+
+        div {
+          display: block;
+          text-align: center;
+          padding-top: 7px;
+          font-size: 14px;
+        }
+      }  
+    }
+  }
+}
+
+
+.playground-links-section {
+  border-top: 1px solid $color-darkgray;
+  padding: 10px 0;
+
+  .links {
+    text-align: right;
+
+    span {
+      padding: 0 5px;
+
+      &.selected {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+
+.playground-details-section {
+  background-image: url("../images/patterns/crossword.png");
+  padding-top: 50px;
+  font-size: 14px;
+
+  .playground-info {
+    padding-bottom: 30px;
+  }
+
+  .court-info {
+    width: 100%;
+
+    td.title {
+      width: 150px;
+    }
+
+    td {
+      padding: 5px;
+      >div {
+        box-sizing: border-box;
+      }
+    }
+    .segment {
+      width: 100px;
+    }
+
+    .info-tag {
+      display: inline-block;
+      padding: 5px;
+      margin-right: 10px;
+      vertical-align: top;
+
+      i {
+        color: $color-logo-blue;
+      }
+    }
+
+    .big {
+      .info-tag {
+        min-width: 230px;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.playground-timings-section {
+  background-image: url("../images/patterns/crossword.png");
+
+  .legend {
+    width: 300px;
+    padding: 20px 0;
+    float: left;
+    text-align: left;
+    border-right: 5px solid $color-gray;
+    box-sizing: border-box;
+
+    .item {
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+      border-bottom: 1px solid $color-gray;
+      
+      &:nth-child(1) {
+        border-top: 1px solid $color-gray;
+      }
+
+      &.selected {
+        background-color: $color-gray;
+      }
+
+      .category {
+        font-size: 12px;
+        color: $color-logo-blue;
+
+        &:before {
+          font-family: "fontello";
+          content: '\e827';
+          padding: 0 5px 0 0;
+        }
+      }
+    }
+  }  
+
+  .legend-details {
+    box-sizing: border-box;
+    width: 600px;
+    float: right;
+
+    .more-info {
+      font-size: 14px;
+      display: inline-block;
+      width: 100%;
+
+      span {
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0 0 30px 20px;
+        padding: 7px;
+        width: 70%;
+      }
+
+      input[type="button"] {
+        float: right;
+        margin: 0;
+      }
+    }
+
+    #timingsWidget {
+      width: 100%;
+      height: 500px;
+      font-size: 14px;
+      box-sizing: border-box;
+      padding-top: 10px;
+
+      .time {
+        font-size: 11px;
+      }
+
+      .timeTick {
+        stroke-width: 2px;
+        stroke: $color-logo-yellow;
+      }
+
+      .dayLines, {
+        stroke-width: 1px;
+        shape-rendering: crispEdges;
+        stroke: #24E917;
+      }
+
+      .slotName {
+        fill: #24E917;
+      }
+    }
+  }
+}
+
+.location-section {
+  @include dark-bg();
+
+  #location-map {
+    display: inline-block;
+    width: 70%;
+    height: 400px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 30%;
+    height: 400px;
+    float: right;
+    font-size: 16px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.playground-photos-section {
+  @include dark-bg();
+
+  .photos {
+    a img {
+      height: 100px;
+    }
+  }  
+}
+
+.playground-reviews-section {
+  background-image: url("../images/patterns/debut_light.png");
+
+  .review {
+    position: relative;
+    padding: 20px 0;
+
+    .date {
+      width: 65px;
+      height: 100%;
+      position: absolute;
+      border-right: 1px solid $color-logo-blue;
+
+      > div {
+        font-size: 12px;
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        padding: 2px 4px;
+
+        &:after {
+          font-family: 'fontello';
+          font-size: 9px;
+          line-height: 9px;
+          position: absolute;
+          right: -9px;
+          top: 10px;
+          color: #ffffff;
+          padding: 4px;
+          border-radius: 10px;
+        }
+      }
+
+      > div.positive {
+        &:after {
+          content: "\e850";
+          background-color: $color-positive;
+        }
+      }
+
+      > div.negative {
+        &:after {
+          content: "\e851";
+          background-color: $color-negative;
+        }
+      }
+    }
+
+    .message, .reviewer {
+      padding-left: 85px;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    .reviewer {
+      &:before {
+        content: "-"
+      }
+
+      text-align: right;
+    }
+  }
+}
+
+.kit {
+  width: 400px;
+  border: 1px solid black;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+
+  .name {
+    font-size: 32px;
+    padding: 10px;
+    background-color: #eeeeee;
+  }
+
+  img {
+    width: 128px;
+    padding: 30px;
+  }
+
+  .details {
+    padding: 0 10px 20px 10px;
+    height: 30px;     
+  }
+
+  .cost {
+    font-size: 30px;
+    background-color: #eeeeee;
+    padding: 10px;
+    color: $color-logo-blue;
+    font-weight: bold;
+  } 
+}
+
+.event-banner {
+  text-align: center;
+  background-color: rgb(43, 43, 43);
+}
+
+
+
