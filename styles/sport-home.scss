@@ -165,9 +165,13 @@
   }
 }
 
-.featured-section {
-  @include dark-bg();
+.map-find-section, .upcoming-events-section {
+  @include pattern-bg();
+}
 
+.featured-section {  
+  @include dark-bg();
+  
   .filters {
     float: right;
     margin-top: 10px;
@@ -192,42 +196,43 @@
       width: 290px;
       box-sizing: border-box;
       background-color: white;
-      border: 1px solid $color-darkgray;
-      border-radius: 6px;
-      margin: 5px 0;
+      margin: 10px 0;
       display: inline-block;
 
       .date {
-        position: absolute;
-        width: 140px;
-        height: 50px;
-        top: 12px;
-        left: -34px;
+        position: relative;
+        top: -35px;
+        width: 42px;
         text-align: center;
-        padding: 12px;
-        font-size: 20px;
-        font-weight: bold;
-        color: $color-logo-blue;
-        box-sizing: border-box;
-        background-image: url("../images/side-band.png");
-        background-repeat: no-repeat;
-        transform: rotate(-45deg);
+        background: white none repeat scroll 0% 0%;
+        color: black;
+        border-radius: 35px;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 5px;
+        margin: auto;
+        border: 3px solid black;
+
+        span {
+          color: $color-logo-blue;
+          font-size: 18px;
+          font-weight: bold;
+        }
       }
 
       img {
         width: 100%;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
       }
 
       .info {
-        padding: 5px 10px;
+        padding: 10px;
+        text-align: center;
 
         .title {
           font-size: 18px;
           font-weight: bold;
           margin-bottom: 15px;
-          color: #333333;
+          color: black;          
         }
 
         .details {
@@ -240,22 +245,11 @@
       }
 
       &.event {
-        background-image: url("../images/patterns/diagmonds.png");
-        border: 1px solid black;
-
-        .title {
-          color: #D7D5D5;
+        .info {
+          position: relative;
+          top: -20px;
+          padding: 0 20px;
         }
-      }
-
-      &.playground {
-        background-image: url("../images/patterns/green_cup.png");
-        border: 5px solid #9DA38D;
-      }
-
-      &.training-club {
-        background-image: url("../images/patterns/swirl_pattern.png");
-        border: 5px solid white;
       }
     }
   }

@@ -309,7 +309,7 @@ input[type="button"] {
   color: white; }
   .location-section .heading {
     color: white;
-    border-bottom-color: #ffd21f; }
+    border-bottom-color: #00aaff; }
   .location-section #location-map {
     display: inline-block;
     width: 70%;
@@ -332,7 +332,7 @@ input[type="button"] {
   color: white; }
   .playground-photos-section .heading {
     color: white;
-    border-bottom-color: #ffd21f; }
+    border-bottom-color: #00aaff; }
   .playground-photos-section .photos a img {
     height: 100px; }
 

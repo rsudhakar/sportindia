@@ -1,11 +1,13 @@
 @font-face {
   font-family: "chosen";
   src: url("../fonts/OpenSans-Regular.ttf"); }
+
 @font-face {
   font-family: "improved";
   src: url("../fonts/Quicksand-Regular.otf"); }
+
 body {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   font-family: chosen; }
 
 input[type="button"] {
@@ -49,7 +51,7 @@ a {
         display: inline-block;
         padding: 10px; }
       .site-header .content .games > div.selected {
-        background-color: #EFEFEF;
+        background-color: #efefef;
         font-weight: bold;
         color: #000000; }
     .site-header .content .login {
@@ -61,7 +63,7 @@ a {
   position: relative; }
 
 .section {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   padding: 30px 0;
   display: inline-block;
   width: 100%; }
@@ -79,5 +81,3 @@ a {
   .section .content {
     width: 900px;
     margin: auto; }
-
-/*# sourceMappingURL=common.css.map */

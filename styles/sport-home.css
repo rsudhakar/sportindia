@@ -190,12 +190,15 @@ a {
   .event-timeline-details .info {
     font-size: 12px; }
 
+.map-find-section, .upcoming-events-section {
+  background-image: url("../images/patterns/crossword.png"); }
+
 .featured-section {
   background-image: url("../images/patterns/grey_wash_wall.png");
   color: white; }
   .featured-section .heading {
     color: white;
-    border-bottom-color: #ffd21f; }
+    border-bottom-color: #00aaff; }
   .featured-section .filters {
     float: right;
     margin-top: 10px;
@@ -212,50 +215,42 @@ a {
       width: 290px;
       box-sizing: border-box;
       background-color: white;
-      border: 1px solid #bfbfbf;
-      border-radius: 6px;
-      margin: 5px 0;
+      margin: 10px 0;
       display: inline-block; }
       .featured-section .featured .tile .date {
-        position: absolute;
-        width: 140px;
-        height: 50px;
-        top: 12px;
-        left: -34px;
+        position: relative;
+        top: -35px;
+        width: 42px;
         text-align: center;
-        padding: 12px;
-        font-size: 20px;
-        font-weight: bold;
-        color: #00aaff;
-        box-sizing: border-box;
-        background-image: url("../images/side-band.png");
-        background-repeat: no-repeat;
-        transform: rotate(-45deg); }
+        background: white none repeat scroll 0% 0%;
+        color: black;
+        border-radius: 35px;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 5px;
+        margin: auto;
+        border: 3px solid black; }
+        .featured-section .featured .tile .date span {
+          color: #00aaff;
+          font-size: 18px;
+          font-weight: bold; }
       .featured-section .featured .tile img {
-        width: 100%;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px; }
+        width: 100%; }
       .featured-section .featured .tile .info {
-        padding: 5px 10px; }
+        padding: 10px;
+        text-align: center; }
         .featured-section .featured .tile .info .title {
           font-size: 18px;
           font-weight: bold;
           margin-bottom: 15px;
-          color: #333333; }
+          color: black; }
         .featured-section .featured .tile .info .details {
           font-size: 15px;
           color: #535353;
           line-height: 18px;
           letter-spacing: 0;
           color: #696868; }
-      .featured-section .featured .tile.event {
-        background-image: url("../images/patterns/diagmonds.png");
-        border: 1px solid black; }
-        .featured-section .featured .tile.event .title {
-          color: #D7D5D5; }
-      .featured-section .featured .tile.playground {
-        background-image: url("../images/patterns/green_cup.png");
-        border: 5px solid #9DA38D; }
-      .featured-section .featured .tile.training-club {
-        background-image: url("../images/patterns/swirl_pattern.png");
-        border: 5px solid white; }
+      .featured-section .featured .tile.event .info {
+        position: relative;
+        top: -20px;
+        padding: 0 20px; }

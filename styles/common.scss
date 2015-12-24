@@ -22,8 +22,12 @@ $color-negative: darkred;
 
   .heading {
     color: white;
-    border-bottom-color: $color-logo-yellow;
+    border-bottom-color: $color-logo-blue;
   }
+}
+
+@mixin pattern-bg {
+  background-image: url("../images/patterns/crossword.png");
 }
 
 

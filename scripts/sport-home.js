@@ -45,8 +45,8 @@ function initEventTimeline() {
 function initFeatured() {
     featured = $('.featured').masonry({
         itemSelector: '.tile',
-        columnWidth: 295,
-        gutter: 5
+        columnWidth: 290,
+        gutter: 15
     });
 }
 

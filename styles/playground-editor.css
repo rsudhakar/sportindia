@@ -1,11 +1,13 @@
 @font-face {
   font-family: "chosen";
   src: url("../fonts/OpenSans-Regular.ttf"); }
+
 @font-face {
   font-family: "improved";
   src: url("../fonts/Quicksand-Regular.otf"); }
+
 body {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   font-family: chosen; }
 
 input[type="button"] {
@@ -49,7 +51,7 @@ a {
         display: inline-block;
         padding: 10px; }
       .site-header .content .games > div.selected {
-        background-color: #EFEFEF;
+        background-color: #efefef;
         font-weight: bold;
         color: #000000; }
     .site-header .content .login {
@@ -61,7 +63,7 @@ a {
   position: relative; }
 
 .section {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   padding: 30px 0;
   display: inline-block;
   width: 100%; }
@@ -105,23 +107,6 @@ input[type="button"] {
   margin: 5px;
   color: black;
   background-color: #ffd21f; }
-
-.section {
-  padding: 30px 0;
-  border-bottom: none;
-  display: inline-block;
-  width: 100%; }
-  .section .half {
-    width: 50%; }
-  .section .heading {
-    font-size: 26px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #00aaff;
-    width: 100%; }
-    .section .heading .details {
-      font-size: 14px;
-      padding-top: 5px; }
 
 .page-banner-section {
   position: relative;
@@ -263,7 +248,7 @@ input[type="button"] {
     padding: 20px 0;
     float: left;
     text-align: left;
-    border-right: 5px solid #EFEFEF;
+    border-right: 5px solid #efefef;
     box-sizing: border-box; }
     .playground-timings-section .legend .item {
       display: inline-block;
@@ -272,11 +257,11 @@ input[type="button"] {
       font-size: 14px;
       padding: 10px;
       width: 100%;
-      border-bottom: 1px solid #EFEFEF; }
+      border-bottom: 1px solid #efefef; }
       .playground-timings-section .legend .item:nth-child(1) {
-        border-top: 1px solid #EFEFEF; }
+        border-top: 1px solid #efefef; }
       .playground-timings-section .legend .item.selected {
-        background-color: #EFEFEF; }
+        background-color: #efefef; }
       .playground-timings-section .legend .item .category {
         font-size: 12px;
         color: #00aaff; }
@@ -324,7 +309,7 @@ input[type="button"] {
   color: white; }
   .location-section .heading {
     color: white;
-    border-bottom-color: #ffd21f; }
+    border-bottom-color: #00aaff; }
   .location-section #location-map {
     display: inline-block;
     width: 70%;
@@ -347,7 +332,7 @@ input[type="button"] {
   color: white; }
   .playground-photos-section .heading {
     color: white;
-    border-bottom-color: #ffd21f; }
+    border-bottom-color: #00aaff; }
   .playground-photos-section .photos a img {
     height: 100px; }
 
@@ -511,5 +496,3 @@ textarea {
     top: 0;
     left: 0;
     z-index: 1; }
-
-/*# sourceMappingURL=playground-editor.css.map */
